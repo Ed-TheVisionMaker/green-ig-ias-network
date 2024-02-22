@@ -1,12 +1,20 @@
 import Link from 'next/link';
 import React, { FC } from 'react';
 
-const Navbar: FC     = () => {
+const Navbar: FC = () => {
   return (
-      <div>
-      <Link href='/welcome'>welcome</Link>
-      <Link href='/invasive'>the invasive species</Link>
-      <Link href='/community'>community</Link>
+    <div>
+      <div className='bg-black flex justify-end py-4 pr-8 space-x-4'>
+        <Link className='text-[#7CEA23]' href='/welcome'>
+          welcome
+        </Link>
+        <Link className='text-[#7CEA23]' href='/invasive'>
+          the invasive species
+        </Link>
+        <Link className='text-[#7CEA23]' href='/community'>
+          community
+        </Link>
+      </div>
     </div>
   );
 };
