@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-const About = () => (
+const Invasive: FC = () => (
   <div>
     <h1>The Green Iguana: An Invasive Alien Species</h1>
     <p>
@@ -22,4 +22,4 @@ const About = () => (
   </div>
 );
 
-export default About;
+export default Invasive;
