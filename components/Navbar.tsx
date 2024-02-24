@@ -3,8 +3,7 @@ import React, { FC } from 'react';
 
 const Navbar: FC = () => {
   return (
-    <div>
-      <div className='bg-black flex justify-end py-4 pr-8 space-x-4'>
+    <header className='bg-black flex justify-end py-4 pr-8 space-x-4'>
         <Link className='text-[#7CEA23] text-lg border-2 border-transparent hover:border-2 hover:border-white py-1 px-2 rounded-xl' href='/welcome'>
           welcome
         </Link>
@@ -14,8 +13,7 @@ const Navbar: FC = () => {
         <Link className='text-[#7CEA23] text-lg border-2 border-transparent hover:border-2 hover:border-white py-1 px-2 rounded-xl' href='/community'>
           community
         </Link>
-      </div>
-    </div>
+    </header>
   );
 };
 
