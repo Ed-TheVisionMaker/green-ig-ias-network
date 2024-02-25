@@ -1,3 +1,5 @@
+'use client';
+
 import React, { createContext, useReducer, ReactNode, Dispatch } from 'react';
 
 interface User {
