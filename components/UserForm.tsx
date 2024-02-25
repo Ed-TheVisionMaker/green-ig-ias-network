@@ -42,10 +42,11 @@ const UserForm: FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h3>Create New User</h3>
+    <form className='flex flex-col items-center' onSubmit={handleSubmit}>
+      <h3 className='text-2xl'>Create New User</h3>
       <label>Name:</label>
       <input
+
         type='text'
         value={name}
         onChange={(e) => setName(e.target.value)}
