@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 
 const Signup = () => {
@@ -6,7 +8,6 @@ const Signup = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(email, password)
   }
 
   return (
