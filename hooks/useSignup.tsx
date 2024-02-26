@@ -11,7 +11,7 @@ export const useSignup = () => {
     setIsLoading(true);
     setIsError(null);
     console.log('email', email, password, 'password');
-    const response = await axios.post('/api/api/user/signup', { email, password });
+    const response = await axios.post('http://localhost:4000/api/user/signup', { email, password });
 
     if (!response.data.success) {
       setIsLoading(false);
