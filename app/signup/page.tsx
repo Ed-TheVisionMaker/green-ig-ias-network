@@ -1,14 +1,18 @@
 'use client';
 
 import { useState } from 'react';
+import { useSignup } from '@/hooks/useSignup';
 
 const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { signup, isLoading, error } = useSignup();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-  }
+
+    await signup(email, password);
+  };
 
   return (
     <form onSubmit={handleSubmit}>
@@ -25,7 +29,10 @@ const Signup = () => {
         onChange={(e) => setPassword(e.target.value)}
         value={password}
       />
-      <button>Sign Up</button>
+      <button disabled={isLoading === null ? undefined : isLoading}>
+        Sign Up
+      </button>
+      <div>{error}</div>
     </form>
   );
 };
