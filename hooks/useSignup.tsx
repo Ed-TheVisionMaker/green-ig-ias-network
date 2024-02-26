@@ -10,8 +10,8 @@ export const useSignup = () => {
   const signup = async (email: string, password: string) => {
     setIsLoading(true);
     setIsError(null);
-
-    const response = await axios.post('/api/user/signup');
+    console.log('email', email, password, 'password');
+    const response = await axios.post('/api/api/user/signup', { email, password });
 
     if (!response.data.success) {
       setIsLoading(false);
