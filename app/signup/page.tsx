@@ -32,7 +32,7 @@ const Signup = () => {
       <button disabled={isLoading === null ? undefined : isLoading}>
         Sign Up
       </button>
-      <div>{error}</div>
+      <div>{error?.error}</div>
     </form>
   );
 };
