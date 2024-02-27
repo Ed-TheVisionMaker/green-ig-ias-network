@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useAuthContext } from './useAuthContect';
-import axios, { AxiosResponse } from 'axios';
+import { useAuthContext } from './useAuthContext';
+import axios from 'axios';
 
 type ErrorMessage = {
   error: string;
