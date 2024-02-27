@@ -19,6 +19,7 @@ export const useLogin = () => {
       const response = await axios.post('/api/user/login', { email, password });
 
       localStorage.setItem('user', JSON.stringify({ response }));
+
       dispatch({ type: 'LOGIN', payload: response.data });
     } catch (error: any) {
       setIsLoading(false);
