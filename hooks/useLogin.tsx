@@ -17,10 +17,11 @@ export const useLogin = () => {
 
     try {
       const response = await axios.post('/api/user/login', { email, password });
+      const user = response.data;
 
-      localStorage.setItem('user', JSON.stringify({ response }));
+      localStorage.setItem('user', JSON.stringify(user));
 
-      dispatch({ type: 'LOGIN', payload: response.data });
+      dispatch({ type: 'LOGIN', payload: user });
     } catch (error: any) {
       setIsLoading(false);
       setError(error.response.data);

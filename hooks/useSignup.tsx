@@ -20,11 +20,12 @@ export const useSignup = () => {
         email,
         password,
       });
+      const user = response.data;
       // save user to local storage (JWT and email property)
-      localStorage.setItem('user', JSON.stringify({ response }));
+      localStorage.setItem('user', JSON.stringify({ user }));
 
       // update the auth context
-      dispatch({ type: 'LOGIN', payload: response.data });
+      dispatch({ type: 'LOGIN', payload: user });
     } catch (error: any) {
       setIsLoading(false);
       setIsError(error.response.data);

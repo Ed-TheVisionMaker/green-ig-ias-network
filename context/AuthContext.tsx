@@ -9,8 +9,8 @@ import React, {
 } from 'react';
 
 interface User {
-  name: string;
   email: string;
+  token: string;
 }
 
 interface AuthState {
@@ -52,10 +52,11 @@ export const AuthContextProvider = ({ children }: { children: ReactNode }) => {
   });
 
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem('user') || '{}');
+    const userLoggedIn = localStorage.getItem('user');
+    const user = userLoggedIn ? JSON.parse(userLoggedIn) : null;
 
     if (user) {
-      dispatch({ type: 'LOGIN', payload: user.response.data });
+      dispatch({ type: 'LOGIN', payload: user });
     }
   }, []);
 
