@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import { useLogout } from '@/hooks/useLogout';
 
 const Logout: FC = () => {
-  const {logout} = useLogout();
+  const { logout } = useLogout();
 
   const handleClick = () => {
     logout();

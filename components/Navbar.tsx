@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Link from 'next/link';
 import React, { FC } from 'react';
 import Logout from './Logout';
