@@ -8,10 +8,10 @@ import React, {
   Dispatch,
 } from 'react';
 
-interface User {
+export interface User {
   email: string;
   token: string;
-  id: string;
+  userId: string
 }
 
 interface AuthState {

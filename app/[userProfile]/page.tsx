@@ -3,10 +3,9 @@
 import { FC, useEffect, useState } from 'react';
 import { useAuthContext } from '@/hooks/useAuthContext';
 import axios from 'axios';
-import { Schema } from 'mongoose';
-
+  
 interface UserProfile {
-  userId: Schema.Types.ObjectId;
+  userId: string;
   name: string;
   location: string;
   description?: string;
@@ -14,7 +13,7 @@ interface UserProfile {
 }
 
 const userProfile: FC = () => {
-  // const [userProfile, setUserProfile] = useState<UserProfile | null>();
+  const [userProfile, setUserProfile] = useState<UserProfile | null>();
   const {
     state: { user },
   } = useAuthContext();
@@ -23,19 +22,33 @@ const userProfile: FC = () => {
     const fetchUserProfile = async () => {
       if (user) {
         try {
-          const response = axios.get(`api/user/${user.id}`);
+          const response = await axios.get<UserProfile>(
+            `api/user-profile/${user.userId}`
+          );
+          setUserProfile(response.data);
         } catch (error) {
-          throw new Error('Error fetching user profile');
+          if (axios.isAxiosError(error) && error.response?.status === 404) {
+            setUserProfile({
+              userId: user.userId,
+              name: '',
+              location: '',
+              description: '',
+              profilePhoto: '',
+            });
+          } else {
+            throw new Error('Error fetching user profile');
+          }
         }
       }
     };
+
     fetchUserProfile();
-  }, []);
+  }, [user]);
 
   return (
     <div>
       <h3>userProfile</h3>
-      <p>{userProfile?.name}</p>
+      <p>{userProfile?.userId}</p>
     </div>
   );
 };
