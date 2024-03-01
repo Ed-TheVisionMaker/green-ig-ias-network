@@ -1,21 +1,10 @@
-import { useState } from 'react';
-import { useAuthContext } from './useAuthContext';
-import { UserProfile } from '@/interfaces/user';
+import { useContext } from 'react';
+import { UserProfileContext } from '@/context/UserProfileContext';
 
-const useUserProfile = () => {
-  const [isNewProfile, setIsNewProfile ] = useState<boolean | null>(null)
-  const [userProfile, setUserProfile] = useState<UserProfile>({
-        userId: '',
-        name: '',
-        description: '',
-        location: '',
-
-    })
-
-    const updateUser = async () => {
-    
-    }
-    const {dispatch} =  useAuthContext();
-
-
-} 
+export const useUserProfileContext = () => {
+  const context = useContext(UserProfileContext);
+  if (!context) {
+    throw new Error('useUserProfileContext must be used within a UserProfileProvider');
+  }
+  return context;
+};

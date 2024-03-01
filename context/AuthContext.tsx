@@ -23,7 +23,7 @@ type Action = { type: 'LOGIN'; payload: User } | { type: 'LOGOUT' };
 interface AuthContextType {
   state: AuthState;
   dispatch: Dispatch<Action>;
-}
+} 
 
 export const AuthContext = createContext<AuthContextType | null>({
   state: {
