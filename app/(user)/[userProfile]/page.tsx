@@ -6,6 +6,8 @@ import axios from 'axios';
 import UserForm from '@/components/UserForm';
 import { UserProfile } from '@/interfaces/user';
 
+import { useUserProfile } from '@/hooks/useUserProfile';
+
 const userProfile: FC = () => {
   const [isNewProfile, setIsNewProfile ] = useState<boolean | null>(null)
   const [userProfile, setUserProfile] = useState<UserProfile>({
@@ -14,6 +16,8 @@ const userProfile: FC = () => {
     location: '',
     description: '',
 })
+
+const [createUserProfile, updateUserProfile, isLoading, error] = useUserProfile();
 
   const {
     state: { user },
@@ -30,12 +34,9 @@ const userProfile: FC = () => {
           setIsNewProfile(false)
         } catch (error) {
           if (axios.isAxiosError(error) && error.response?.status === 404) {
-            setUserProfile({
-              userId: user.userId,
-              name: '',
-              location: '',
-              description: '',
-            });
+            await createUserProfile({
+              userId: user.userId
+            })
             setIsNewProfile(true)
           } else {
             throw new Error('Error fetching user profile');
