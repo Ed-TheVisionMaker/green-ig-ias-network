@@ -17,7 +17,7 @@ const userProfile: FC = () => {
     description: '',
 })
 
-const [createUserProfile, updateUserProfile, isLoading, error] = useUserProfile();
+const {createUserProfile} = useUserProfile();
 
   const {
     state: { user },

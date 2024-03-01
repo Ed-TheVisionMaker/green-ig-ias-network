@@ -1,3 +1,4 @@
+'use client'
 import React, { createContext, useReducer, ReactNode, Dispatch } from 'react';
 import { UserProfile } from '@/interfaces/user';
 
@@ -35,6 +36,9 @@ export const UserProfileProvider = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(userProfileReducer, {
     userProfile: null,
   });
+
+  console.log('UserProfileContext', state)
+
   return (
     <UserProfileContext.Provider value={{ state, dispatch }}>
       {children}
