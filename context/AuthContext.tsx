@@ -11,6 +11,7 @@ import React, {
 interface User {
   email: string;
   token: string;
+  id: string;
 }
 
 interface AuthState {

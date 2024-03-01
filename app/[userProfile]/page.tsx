@@ -1,11 +1,9 @@
+'use client';
+
 import { FC, useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';
+import { useAuthContext } from '@/hooks/useAuthContext';
 import axios from 'axios';
 import { Schema } from 'mongoose';
-
-type Params = {
-  profile: string;
-};
 
 interface UserProfile {
   userId: Schema.Types.ObjectId;
@@ -16,14 +14,24 @@ interface UserProfile {
 }
 
 const userProfile: FC = () => {
-  const [userProfile, setUserProfile] = useState<UserProfile | null>();
-  const { profile } = useParams() as Params;
+  // const [userProfile, setUserProfile] = useState<UserProfile | null>();
+  const {
+    state: { user },
+  } = useAuthContext();
 
   useEffect(() => {
-    async () => {
-      await axios.post(`api/user/${profile}`);
+    const fetchUserProfile = async () => {
+      if (user) {
+        try {
+          const response = axios.get(`api/user/${user.id}`);
+        } catch (error) {
+          throw new Error('Error fetching user profile');
+        }
+      }
     };
+    fetchUserProfile();
   }, []);
+
   return (
     <div>
       <h3>userProfile</h3>
