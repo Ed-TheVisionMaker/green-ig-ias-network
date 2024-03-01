@@ -4,18 +4,17 @@ import { FC, useEffect, useState } from 'react';
 import { useAuthContext } from '@/hooks/useAuthContext';
 import axios from 'axios';
 import UserForm from '@/components/UserForm';
-  
-interface UserProfile {
-  userId: string;
-  name: string;
-  location: string;
-  description?: string;
-  profilePhoto?: string;
-}
+import { UserProfile } from '@/interfaces/user';
 
 const userProfile: FC = () => {
-  const [userProfile, setUserProfile] = useState<UserProfile | null>();
   const [isNewProfile, setIsNewProfile ] = useState<boolean | null>(null)
+  const [userProfile, setUserProfile] = useState<UserProfile>({
+    userId: '',
+    name: '',
+    location: '',
+    description: '',
+})
+
   const {
     state: { user },
   } = useAuthContext();
@@ -25,9 +24,10 @@ const userProfile: FC = () => {
       if (user) {
         try {
           const response = await axios.get<UserProfile>(
-            `api/user-profile/${user.userId}`
+            `api/user/${user.userId}`
           );
           setUserProfile(response.data);
+          setIsNewProfile(false)
         } catch (error) {
           if (axios.isAxiosError(error) && error.response?.status === 404) {
             setUserProfile({
@@ -35,7 +35,6 @@ const userProfile: FC = () => {
               name: '',
               location: '',
               description: '',
-              profilePhoto: '',
             });
             setIsNewProfile(true)
           } else {

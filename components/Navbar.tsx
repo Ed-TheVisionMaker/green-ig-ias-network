@@ -3,14 +3,15 @@ import Link from 'next/link';
 import React, { FC } from 'react';
 import Logout from './Logout';
 import { useAuthContext } from '@/hooks/useAuthContext';
-import userProfile from '@/app/[userProfile]/page';
+import userProfile from '@/app/(user)/[userProfile]/page';
 
 const Navbar: FC = () => {
   const {
     state: { user },
   } = useAuthContext();
 
-  const id = user?.id;
+  const id = user?.userId;
+  
   return (
     <header className='bg-black flex justify-end py-4 pr-8 space-x-4'>
       <Link
