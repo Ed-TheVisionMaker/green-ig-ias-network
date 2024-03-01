@@ -3,6 +3,7 @@
 import { FC, useEffect, useState } from 'react';
 import { useAuthContext } from '@/hooks/useAuthContext';
 import axios from 'axios';
+import UserForm from '@/components/UserForm';
   
 interface UserProfile {
   userId: string;
@@ -14,6 +15,7 @@ interface UserProfile {
 
 const userProfile: FC = () => {
   const [userProfile, setUserProfile] = useState<UserProfile | null>();
+  const [isNewProfile, setIsNewProfile ] = useState<boolean | null>(null)
   const {
     state: { user },
   } = useAuthContext();
@@ -35,6 +37,7 @@ const userProfile: FC = () => {
               description: '',
               profilePhoto: '',
             });
+            setIsNewProfile(true)
           } else {
             throw new Error('Error fetching user profile');
           }
@@ -47,8 +50,7 @@ const userProfile: FC = () => {
 
   return (
     <div>
-      <h3>userProfile</h3>
-      <p>{userProfile?.userId}</p>
+      <UserForm />
     </div>
   );
 };
