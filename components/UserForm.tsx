@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import axios, { AxiosError } from 'axios';
-import { Types, set } from 'mongoose';
+import { useUserProfile } from '@/hooks/useUserProfile';
 
 interface UserResponseData {
   data: User;
@@ -8,7 +8,7 @@ interface UserResponseData {
 }
 
 interface User {
-  _id: Types.ObjectId;
+  _id: string;
   name: string;
   email: string;
   description: string;
@@ -19,18 +19,21 @@ interface User {
 
 const UserForm: FC = () => {
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
   const [description, setDescription] = useState('');
   const [location, setLocation] = useState('');
   const [error, setError] = useState<null | string>(null);
+  const { updateUserProfile } = useUserProfile();
 
-  const handleSubmit = async (e: React.FormEvent) : Promise<void> => {
+  const handleSubmit = async (e: React.FormEvent): Promise<void> => {
     e.preventDefault();
-    const user = { name, email, description, location };
+    const user = { name, description, location };
     try {
-      await axios.post<UserResponseData>('/api/users', user);
+      updateUserProfile({
+        name,
+        description,
+        location,
+      })
       setName('');
-      setEmail('');
       setDescription('');
       setLocation('');
       setError(null);
@@ -43,19 +46,12 @@ const UserForm: FC = () => {
 
   return (
     <form className='flex flex-col items-center' onSubmit={handleSubmit}>
-      <h3 className='text-2xl'>Create New User</h3>
+      <h3 className='text-2xl'>User Profile</h3>
       <label>Name:</label>
       <input
-
         type='text'
         value={name}
         onChange={(e) => setName(e.target.value)}
-      />
-      <label>Email:</label>
-      <input
-        type='text'
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
       />
       <label>Description:</label>
       <input
@@ -69,7 +65,7 @@ const UserForm: FC = () => {
         value={location}
         onChange={(e) => setLocation(e.target.value)}
       />
-      <button>Create User</button>
+      <button>Update Profile</button>
       {error && <div>{error}</div>}
     </form>
   );
