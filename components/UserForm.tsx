@@ -1,47 +1,20 @@
 import React, { FC, useState } from 'react';
-import axios, { AxiosError } from 'axios';
 import { useUserProfile } from '@/hooks/useUserProfile';
-
-interface UserResponseData {
-  data: User;
-  status: number;
-}
-
-interface User {
-  _id: string;
-  name: string;
-  email: string;
-  description: string;
-  location: string;
-  createdAt: Date;
-  updatedAt: Date;
-}
+import { UserProfile } from '@/interfaces/user';
 
 const UserForm: FC = () => {
-  const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
-  const [location, setLocation] = useState('');
-  const [error, setError] = useState<null | string>(null);
-  const { updateUserProfile } = useUserProfile();
+  const { updateUserProfile, error, isLoading } = useUserProfile();
+  const [formState, setFormState] = useState< Partial<UserProfile>>({
+    userName: '',
+    description: '',
+    location: '',
+  });
 
   const handleSubmit = async (e: React.FormEvent): Promise<void> => {
     e.preventDefault();
-    const user = { name, description, location };
-    try {
-      updateUserProfile({
-        name,
-        description,
-        location,
-      })
-      setName('');
-      setDescription('');
-      setLocation('');
-      setError(null);
-    } catch (error) {
-      const err = error as AxiosError;
-      setError(err.message);
-      throw new Error(err.message);
-    }
+    
+
+    updateUserProfile(formState);
   };
 
   return (
@@ -50,20 +23,20 @@ const UserForm: FC = () => {
       <label>Name:</label>
       <input
         type='text'
-        value={name}
-        onChange={(e) => setName(e.target.value)}
+        value={formState.userName}
+        onChange={(e) => setFormState({ ...formState, userName: e.target.value })}
       />
       <label>Description:</label>
       <input
         type='text'
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
+        value={formState.description}
+        onChange={(e) => setFormState({ ...formState, description: e.target.value })}
       />
       <label>Location:</label>
       <input
         type='text'
-        value={location}
-        onChange={(e) => setLocation(e.target.value)}
+        value={formState.location}
+        onChange={(e) => setFormState({ ...formState, location: e.target.value })}
       />
       <button>Update Profile</button>
       {error && <div>{error}</div>}

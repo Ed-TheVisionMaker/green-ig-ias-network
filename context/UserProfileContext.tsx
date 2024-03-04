@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { createContext, useReducer, ReactNode, Dispatch } from 'react';
 import { UserProfile } from '@/interfaces/user';
 
@@ -6,7 +6,7 @@ interface UserProfileState {
   userProfile: UserProfile | null;
 }
 
-type Action = { type: 'UPDATE'; payload: UserProfile };
+type Action = { type: 'UPDATE'; payload: Partial<UserProfile> };
 
 interface UserProfileContextType {
   state: UserProfileState | null;
@@ -25,8 +25,10 @@ export const userProfileReducer = (state: UserProfileState, action: Action) => {
     case 'UPDATE':
       return {
         ...state,
-        // might need to spread the userProfile to cater for partial updates.
-        userProfile: action.payload,
+        userProfie: {
+          ...state.userProfile,
+          ...action.payload,
+        },
       };
     default:
       return state;
@@ -37,7 +39,7 @@ export const UserProfileProvider = ({ children }: { children: ReactNode }) => {
     userProfile: null,
   });
 
-  console.log('UserProfileContext', state)
+  console.log('UserProfileContext', state);
 
   return (
     <UserProfileContext.Provider value={{ state, dispatch }}>
