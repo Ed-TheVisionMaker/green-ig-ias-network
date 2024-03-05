@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react';
 import axios, { AxiosError } from 'axios';
 import { Types, set } from 'mongoose';
+import { useAuthStore } from '@/store/authStore';
 
 interface UserResponseData {
   data: User;
@@ -24,11 +25,13 @@ const UserForm: FC = () => {
   const [location, setLocation] = useState('');
   const [error, setError] = useState<null | string>(null);
 
+  const user = useAuthStore((state) => state.user);
+
   const handleSubmit = async (e: React.FormEvent) : Promise<void> => {
     e.preventDefault();
     const user = { name, email, description, location };
     try {
-      await axios.post<UserResponseData>('/api/users', user);
+      // await axios.post<UserResponseData>('/api/users', user);
       setName('');
       setEmail('');
       setDescription('');
@@ -48,13 +51,13 @@ const UserForm: FC = () => {
       <input
 
         type='text'
-        value={name}
+        value={user.email}
         onChange={(e) => setName(e.target.value)}
       />
       <label>Email:</label>
       <input
         type='text'
-        value={email}
+        value={user.token}
         onChange={(e) => setEmail(e.target.value)}
       />
       <label>Description:</label>

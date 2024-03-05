@@ -1,6 +1,6 @@
-import { createStore } from 'zustand/vanilla';
+import { create } from 'zustand';
 
-export type UserState = {
+export type AuthStore = {
   user: {
     email: string;
     token: string;
@@ -8,9 +8,9 @@ export type UserState = {
 };
 
 // zustand creates a custom hook
-export const useAuthStore = createStore<UserState>(() => ({
+export const useAuthStore = create<AuthStore>(() => ({
   user: {
-    email: '',
-    token: '',
+    email: 'test email',
+    token: 'test token',
   },
 }));
