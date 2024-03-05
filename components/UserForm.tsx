@@ -1,6 +1,23 @@
 import React, { FC, useState } from 'react';
-import { useUserProfile } from '@/hooks/useUserProfile';
-import { UserProfile } from '@/interfaces/user';
+import axios, { AxiosError } from 'axios';
+import { Types, set } from 'mongoose';
+import { useAuthStore } from '@/store/authStore';
+import { useUserProfileStore } from '@/store/userProfileStore';
+
+interface UserResponseData {
+  data: User;
+  status: number;
+}
+
+interface User {
+  _id: Types.ObjectId;
+  name: string;
+  email: string;
+  description: string;
+  location: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
 
 const UserForm: FC = () => {
   const { updateUserProfile, error, isLoading } = useUserProfile();
@@ -10,9 +27,21 @@ const UserForm: FC = () => {
     location: '',
   });
 
+  const user = useAuthStore((state) => state.user);
+  const updateUser = useAuthStore((state) => state.updateUser);
+
+  const userProfile = useUserProfileStore((state) => state.userProfile);
+  const updateProfile = useUserProfileStore((state) => state.updateProfile);
+
   const handleSubmit = async (e: React.FormEvent): Promise<void> => {
     e.preventDefault();
-    updateUserProfile(formState);
+    const user = { name, email, description, location };
+    try {
+      // await axios.post<UserResponseData>('/api/users', user);
+    } catch (error) {
+      const err = error as AxiosError;
+      throw new Error(err.message);
+    }
   };
 
   return (
@@ -21,14 +50,14 @@ const UserForm: FC = () => {
       <label>Name:</label>
       <input
         type='text'
-        value={formState.userName}
-        onChange={(e) => setFormState({ ...formState, userName: e.target.value })}
+        value={userProfile.userName}
+        onChange={(e) => setName(e.target.value)}
       />
       <label>Description:</label>
       <input
         type='text'
-        value={formState.description}
-        onChange={(e) => setFormState({ ...formState, description: e.target.value })}
+        value={userProfile.description}
+        onChange={(e) => setDescription(e.target.value)}
       />
       <label>Location:</label>
       <input
