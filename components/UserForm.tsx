@@ -26,6 +26,11 @@ const UserForm: FC = () => {
   const [error, setError] = useState<null | string>(null);
 
   const user = useAuthStore((state) => state.user);
+  const updateUser = useAuthStore((state) => state.updateUser);
+  const newUser = {
+    email: 'newemail',
+    token: 'newtoken',
+  }
 
   const handleSubmit = async (e: React.FormEvent) : Promise<void> => {
     e.preventDefault();
@@ -72,7 +77,7 @@ const UserForm: FC = () => {
         value={location}
         onChange={(e) => setLocation(e.target.value)}
       />
-      <button>Create User</button>
+      <button onClick={() => updateUser(newUser)}>Create User</button>
       {error && <div>{error}</div>}
     </form>
   );
