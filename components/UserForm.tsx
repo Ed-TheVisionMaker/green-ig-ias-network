@@ -2,6 +2,7 @@ import React, { FC, useState } from 'react';
 import axios, { AxiosError } from 'axios';
 import { Types, set } from 'mongoose';
 import { useAuthStore } from '@/store/authStore';
+import { useUserProfileStore } from '@/store/userProfileStore';
 
 interface UserResponseData {
   data: User;
@@ -27,24 +28,17 @@ const UserForm: FC = () => {
 
   const user = useAuthStore((state) => state.user);
   const updateUser = useAuthStore((state) => state.updateUser);
-  const newUser = {
-    email: 'newemail',
-    token: 'newtoken',
-  }
 
-  const handleSubmit = async (e: React.FormEvent) : Promise<void> => {
+  const userProfile = useUserProfileStore((state) => state.userProfile);
+  const updateProfile = useUserProfileStore((state) => state.updateProfile);
+
+  const handleSubmit = async (e: React.FormEvent): Promise<void> => {
     e.preventDefault();
     const user = { name, email, description, location };
     try {
       // await axios.post<UserResponseData>('/api/users', user);
-      setName('');
-      setEmail('');
-      setDescription('');
-      setLocation('');
-      setError(null);
     } catch (error) {
       const err = error as AxiosError;
-      setError(err.message);
       throw new Error(err.message);
     }
   };
@@ -54,21 +48,14 @@ const UserForm: FC = () => {
       <h3 className='text-2xl'>Create New User</h3>
       <label>Name:</label>
       <input
-
         type='text'
-        value={user.email}
+        value={userProfile.userName}
         onChange={(e) => setName(e.target.value)}
-      />
-      <label>Email:</label>
-      <input
-        type='text'
-        value={user.token}
-        onChange={(e) => setEmail(e.target.value)}
       />
       <label>Description:</label>
       <input
         type='text'
-        value={description}
+        value={userProfile.description}
         onChange={(e) => setDescription(e.target.value)}
       />
       <label>Location:</label>
@@ -77,7 +64,7 @@ const UserForm: FC = () => {
         value={location}
         onChange={(e) => setLocation(e.target.value)}
       />
-      <button onClick={() => updateUser(newUser)}>Create User</button>
+      <button>Create User</button>
       {error && <div>{error}</div>}
     </form>
   );
