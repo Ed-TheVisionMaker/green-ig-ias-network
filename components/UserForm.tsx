@@ -4,20 +4,6 @@ import { Types, set } from 'mongoose';
 import { useAuthStore } from '@/store/authStore';
 import { useUserProfileStore } from '@/store/userProfileStore';
 
-interface UserResponseData {
-  data: User;
-  status: number;
-}
-
-interface User {
-  _id: Types.ObjectId;
-  name: string;
-  email: string;
-  description: string;
-  location: string;
-  createdAt: Date;
-  updatedAt: Date;
-}
 
 const UserForm: FC = () => {
   const { updateUserProfile, error, isLoading } = useUserProfile();
@@ -31,13 +17,10 @@ const UserForm: FC = () => {
   const updateUser = useAuthStore((state) => state.updateUser);
 
   const userProfile = useUserProfileStore((state) => state.userProfile);
-  const updateProfile = useUserProfileStore((state) => state.updateProfile);
 
   const handleSubmit = async (e: React.FormEvent): Promise<void> => {
     e.preventDefault();
-    const user = { name, email, description, location };
     try {
-      // await axios.post<UserResponseData>('/api/users', user);
     } catch (error) {
       const err = error as AxiosError;
       throw new Error(err.message);
@@ -51,19 +34,16 @@ const UserForm: FC = () => {
       <input
         type='text'
         value={userProfile.userName}
-        onChange={(e) => setName(e.target.value)}
       />
       <label>Description:</label>
       <input
         type='text'
         value={userProfile.description}
-        onChange={(e) => setDescription(e.target.value)}
       />
       <label>Location:</label>
       <input
         type='text'
         value={formState.location}
-        onChange={(e) => setFormState({ ...formState, location: e.target.value })}
       />
       <button>Update Profile</button>
       {error && <div>{error}</div>}
