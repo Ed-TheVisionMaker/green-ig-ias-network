@@ -25,7 +25,7 @@ interface AuthContextType {
   dispatch: Dispatch<Action>;
 } 
 
-export const AuthContext = createContext<AuthContextType | null>({
+export const AuthContext = createContext<AuthContextType>({
   state: {
     user: null,
   },

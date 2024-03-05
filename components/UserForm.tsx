@@ -12,8 +12,6 @@ const UserForm: FC = () => {
 
   const handleSubmit = async (e: React.FormEvent): Promise<void> => {
     e.preventDefault();
-    
-
     updateUserProfile(formState);
   };
 
