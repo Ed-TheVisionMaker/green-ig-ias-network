@@ -9,6 +9,8 @@ export const useUserProfile = () => {
   const [error, setIsError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean | null>(null);
   const updateProfile = useUserProfileStore((state) => state.updateProfile);
+  const params = useParams();
+  console.log(params.userProfile, "params");
 
 
   const updateUserProfile = async (userProfile: Partial<UserProfile>) => {

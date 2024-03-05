@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { useAuthContext } from './useAuthContext';
 import { useUserProfile } from './useUserProfile';
 
 type ErrorMessage = {
@@ -10,7 +9,6 @@ type ErrorMessage = {
 export const useSignup = () => {
   const [error, setIsError] = useState<ErrorMessage | null>(null);
   const [isLoading, setIsLoading] = useState<boolean | null>(null);
-  const { dispatch } = useAuthContext();
 
   const signup = async (email: string, password: string) => {
     setIsLoading(true);
@@ -26,7 +24,6 @@ export const useSignup = () => {
       localStorage.setItem('user', JSON.stringify({ user }));
 
       // update the auth context
-      dispatch({ type: 'LOGIN', payload: user });
     } catch (error: any) {
       setIsLoading(false);
       setIsError(error.response.data);

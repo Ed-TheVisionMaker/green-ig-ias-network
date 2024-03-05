@@ -3,10 +3,10 @@ import axios, { AxiosError } from 'axios';
 import { Types, set } from 'mongoose';
 import { useAuthStore } from '@/store/authStore';
 import { useUserProfileStore } from '@/store/userProfileStore';
+import { UserProfile } from '@/interfaces/user';
 
 
 const UserForm: FC = () => {
-  const { updateUserProfile, error, isLoading } = useUserProfile();
   const [formState, setFormState] = useState< Partial<UserProfile>>({
     userName: '',
     description: '',
@@ -46,7 +46,7 @@ const UserForm: FC = () => {
         value={formState.location}
       />
       <button>Update Profile</button>
-      {error && <div>{error}</div>}
+      {/* {error && <div>{error}</div>} */}
     </form>
   );
 };

@@ -2,16 +2,13 @@
 import Link from 'next/link';
 import React, { FC } from 'react';
 import Logout from './Logout';
-import { useAuthContext } from '@/hooks/useAuthContext';
-import userProfile from '@/app/(user)/[userProfile]/page';
+import { useAuthStore } from '@/store/authStore';
+import { useUserProfileStore } from '@/store/userProfileStore';
 
 const Navbar: FC = () => {
-  const {
-    state: { user },
-  } = useAuthContext();
+  const user = useAuthStore((state) => state.user);
+  const { userId } = useUserProfileStore((state) => state.userProfile);
 
-  const id = user?.userId;
-  
   return (
     <header className='bg-black flex justify-end py-4 pr-8 space-x-4'>
       <Link
@@ -38,7 +35,7 @@ const Navbar: FC = () => {
             <span className='text-[#7CEA23] text-lg'>{user.email}</span>
             <Logout />
             <Link
-              href={`/${id}`}
+              href={`/${userId}`}
               className='text-[#7CEA23] text-lg border-2 border-transparent hover:border-2 hover:border-white py-1 px-2 rounded-xl'
             >
               User Profile
