@@ -6,6 +6,7 @@ export type authStore = {
     token: string;
   };
   updateUser: (user: authStore['user']) => void;
+  logout: () => void;
 };
 
 // zustand creates a custom hook
@@ -15,4 +16,6 @@ export const useAuthStore = create<authStore>((set) => ({
     token: 'test token',
   },
   updateUser: (user: authStore['user']) => set({ user }),
+  logout: () => set({ user: { email: '', token: '' } }),
 }));
+
