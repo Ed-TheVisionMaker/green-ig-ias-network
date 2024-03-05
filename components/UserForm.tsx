@@ -1,6 +1,8 @@
 import React, { FC, useState } from 'react';
 import axios, { AxiosError } from 'axios';
 import { Types, set } from 'mongoose';
+import { useAuthStore } from '@/store/authStore';
+import { useUserProfileStore } from '@/store/userProfileStore';
 
 interface UserResponseData {
   data: User;
@@ -24,19 +26,19 @@ const UserForm: FC = () => {
   const [location, setLocation] = useState('');
   const [error, setError] = useState<null | string>(null);
 
-  const handleSubmit = async (e: React.FormEvent) : Promise<void> => {
+  const user = useAuthStore((state) => state.user);
+  const updateUser = useAuthStore((state) => state.updateUser);
+
+  const userProfile = useUserProfileStore((state) => state.userProfile);
+  const updateProfile = useUserProfileStore((state) => state.updateProfile);
+
+  const handleSubmit = async (e: React.FormEvent): Promise<void> => {
     e.preventDefault();
     const user = { name, email, description, location };
     try {
-      await axios.post<UserResponseData>('/api/users', user);
-      setName('');
-      setEmail('');
-      setDescription('');
-      setLocation('');
-      setError(null);
+      // await axios.post<UserResponseData>('/api/users', user);
     } catch (error) {
       const err = error as AxiosError;
-      setError(err.message);
       throw new Error(err.message);
     }
   };
@@ -46,21 +48,14 @@ const UserForm: FC = () => {
       <h3 className='text-2xl'>Create New User</h3>
       <label>Name:</label>
       <input
-
         type='text'
-        value={name}
+        value={userProfile.userName}
         onChange={(e) => setName(e.target.value)}
-      />
-      <label>Email:</label>
-      <input
-        type='text'
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
       />
       <label>Description:</label>
       <input
         type='text'
-        value={description}
+        value={userProfile.description}
         onChange={(e) => setDescription(e.target.value)}
       />
       <label>Location:</label>
