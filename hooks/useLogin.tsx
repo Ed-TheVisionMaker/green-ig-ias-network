@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useAuthContext } from './useAuthContext';
 import axios from 'axios';
+import { useAuthStore } from '@/store/authStore';
 
 type ErrorMessage = {
   error: string;
@@ -9,7 +9,7 @@ type ErrorMessage = {
 export const useLogin = () => {
   const [error, setError] = useState<ErrorMessage | null>(null);
   const [isLoading, setIsLoading] = useState<boolean | null>(null);
-  const { dispatch } = useAuthContext();
+  const { userLoggedIn } = useAuthStore((state) => state);
 
   const login = async (email: string, password: string) => {
     setIsLoading(true);
@@ -20,8 +20,7 @@ export const useLogin = () => {
       const user = response.data;
 
       localStorage.setItem('user', JSON.stringify(user));
-
-      dispatch({ type: 'LOGIN', payload: user });
+      userLoggedIn(user);
     } catch (error: any) {
       setIsLoading(false);
       setError(error.response.data);

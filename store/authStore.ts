@@ -5,7 +5,7 @@ export type authStore = {
     email: string;
     token: string;
   };
-  updateUser: (user: authStore['user']) => void;
+  userLoggedIn: (user: authStore['user']) => void;
   logout: () => void;
 };
 
@@ -15,7 +15,7 @@ export const useAuthStore = create<authStore>((set) => ({
     email: 'test email',
     token: 'test token',
   },
-  updateUser: (user: authStore['user']) => set({ user }),
+  userLoggedIn: (user: authStore['user']) => set({ user }),
   logout: () => set({ user: { email: '', token: '' } }),
 }));
 
