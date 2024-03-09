@@ -5,14 +5,14 @@ const Community: FC = () => (
     <h2>Welcome to Our Community Effort Against Invasive Green Iguanas!</h2>
     <p>
       Are you concerned about the threat posed by Green Iguanas as an Invasive
-      Alien Species (IAS)? Whether you're a concerned citizen, a local farmer, a
+      Alien Species (IAS)? Whether you&apos;re a concerned citizen, a local farmer, a
       conservationist, or a government official, we invite you to join our
       collective effort to tackle this challenge!
     </p>
     <p>
       Our website serves as a hub for sharing information, best practices, and
       resources for reducing or eradicating Green Iguanas in non-native
-      habitats. Here's what you can expect to come from our platform:
+      habitats. Here&apos;s what you can expect to come from our platform:
     </p>
     <ul>
       <li>
@@ -50,7 +50,7 @@ const Community: FC = () => (
       </li>
     </ul>
     <p>
-      By joining our community, you'll be part of a collective effort to protect
+      By joining our community, you&apos;ll be part of a collective effort to protect
       native ecosystems, preserve agricultural productivity, and mitigate the
       threats posed by Invasive Green Iguanas. Together, we can make a
       difference!

@@ -2,17 +2,23 @@ import { create } from 'zustand';
 
 export type authStore = {
   user: {
+    userId: string;
     email: string;
     token: string;
   };
-  updateUser: (user: authStore['user']) => void;
+  userLoggedIn: (user: authStore['user']) => void;
+  logout: () => void;
 };
 
-// zustand creates a custom hook
-export const useAuthStore = create<authStore>((set) => ({
-  user: {
-    email: 'test email',
-    token: 'test token',
-  },
-  updateUser: (user: authStore['user']) => set({ user }),
-}));
+export const useAuthStore = create<authStore>((set) => {
+  const storedUser = localStorage.getItem('user');
+  const initialUser = storedUser
+    ? JSON.parse(storedUser)
+    : { userId: '', email: '', token: '' };
+
+  return {
+    user: initialUser,
+    userLoggedIn: (user: authStore['user']) => set({ user }),
+    logout: () => set({ user: { userId: '', email: '', token: '' } }),
+  };
+});
