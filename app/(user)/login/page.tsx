@@ -15,7 +15,7 @@ const Login = () => {
   };
 
   useEffect(() => {
-    console.log(user, 'user in auth store');
+    console.log(user, 'user set in login page');
   }, [user]);
 
   return (

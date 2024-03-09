@@ -10,12 +10,15 @@ export type authStore = {
   logout: () => void;
 };
 
-export const useAuthStore = create<authStore>((set) => ({
-  user: {
-    userId: '',
-    email: '',
-    token: '',
-  },
-  userLoggedIn: (user: authStore['user']) => set({ user }),
-  logout: () => set({ user: { userId: '', email: '', token: '' } }),
-}));
+export const useAuthStore = create<authStore>((set) => {
+  const storedUser = localStorage.getItem('user');
+  const initialUser = storedUser
+    ? JSON.parse(storedUser)
+    : { userId: '', email: '', token: '' };
+
+  return {
+    user: initialUser,
+    userLoggedIn: (user: authStore['user']) => set({ user }),
+    logout: () => set({ user: { userId: '', email: '', token: '' } }),
+  };
+});

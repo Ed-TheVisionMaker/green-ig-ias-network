@@ -6,7 +6,7 @@ import UserForm from '@/components/UserForm';
 const Home: FC = () => {
   return (
     <div>
-      <UserForm />
+      Homepage
     </div>
   );
 };

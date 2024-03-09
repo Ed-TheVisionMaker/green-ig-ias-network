@@ -5,6 +5,7 @@ import axios from 'axios';
 import UserForm from '@/components/UserForm';
 import { UserProfile } from '@/interfaces/user';
 import { useAuthStore } from '@/store/authStore';
+import useAuthAxios from '@/hooks/useAuthAxios';
 
 const userProfile: FC = () => {
   const [userProfile, setUserProfile] = useState<UserProfile>({
@@ -15,20 +16,12 @@ const userProfile: FC = () => {
   });
 
   const user  = useAuthStore((state) => state.user);
-
+  const authAxios = useAuthAxios();
 
   useEffect(() => {
     const fetchUserProfile = async () => {
-      console.log(user, "fetchUserProfile user in auth store")
       if (user) {
-        const response = await axios.get<UserProfile>(
-          `api/user/${user.userId}`,
-          {
-            headers: {
-              Authorization: `Bearer ${user.token}`,
-            },
-          }
-        );
+        const response = await authAxios.get<UserProfile>(`api/user/${user.userId}`);
         setUserProfile(response.data);
       }
     };

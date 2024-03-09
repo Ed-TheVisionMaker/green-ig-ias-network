@@ -1,6 +1,5 @@
 import React, { FC, useState, useEffect } from 'react';
 import axios, { AxiosError } from 'axios';
-import { Types, set } from 'mongoose';
 import { useAuthStore } from '@/store/authStore';
 import { useUserProfileStore } from '@/store/userProfileStore';
 import { UserProfile } from '@/interfaces/user';
@@ -17,6 +16,7 @@ const UserForm: FC = () => {
   const userProfile = useUserProfileStore((state) => state.userProfile);
   const updateUserProfile = useUserProfileStore((state) => state.updateProfile);
 
+
   const handleSubmit = async (e: React.FormEvent): Promise<void> => {
     e.preventDefault();
     try {
@@ -26,19 +26,20 @@ const UserForm: FC = () => {
     }
   };
 
-  useEffect(() => {
-    const fetchUserProfile = async () => {
-      const response = await axios.get<UserProfile>(`api/user/${user.userId}`, {
-        headers: {
-          Authorization: `Bearer ${user.token}`,
-        },
-      });
-      updateUserProfile(response.data);
-    };
-    if (user.token.length) {
-      fetchUserProfile();
-    }
-  }, []);
+  // useEffect(() => {
+  //   const fetchUserProfile = async () => {
+  //     const response = await axios.get<UserProfile>(`api/user/${user.userId}`, {
+  //       // const response = await authAxios.get<UserProfile>(`api/user/${user.userId}`, {
+  //       headers: {
+  //         Authorization: `Bearer ${user.token}`,
+  //       },
+  //     });
+  //     updateUserProfile(response.data);
+  //   };
+  //   if (user.token.length) {
+  //     fetchUserProfile();
+  //   }
+  // }, []);
 
   return (
     <form className='flex flex-col items-center' onSubmit={handleSubmit}>
