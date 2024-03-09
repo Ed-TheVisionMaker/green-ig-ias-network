@@ -1,13 +1,12 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import axios, { AxiosError } from 'axios';
 import { Types, set } from 'mongoose';
 import { useAuthStore } from '@/store/authStore';
 import { useUserProfileStore } from '@/store/userProfileStore';
 import { UserProfile } from '@/interfaces/user';
 
-
 const UserForm: FC = () => {
-  const [formState, setFormState] = useState< Partial<UserProfile>>({
+  const [formState, setFormState] = useState<Partial<UserProfile>>({
     userName: '',
     description: '',
     location: '',
@@ -16,6 +15,7 @@ const UserForm: FC = () => {
   const user = useAuthStore((state) => state.user);
 
   const userProfile = useUserProfileStore((state) => state.userProfile);
+  const updateUserProfile = useUserProfileStore((state) => state.updateProfile);
 
   const handleSubmit = async (e: React.FormEvent): Promise<void> => {
     e.preventDefault();
@@ -26,24 +26,29 @@ const UserForm: FC = () => {
     }
   };
 
+  useEffect(() => {
+    const fetchUserProfile = async () => {
+      const response = await axios.get<UserProfile>(`api/user/${user.userId}`, {
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
+      });
+      updateUserProfile(response.data);
+    };
+    if (user.token.length) {
+      fetchUserProfile();
+    }
+  }, []);
+
   return (
     <form className='flex flex-col items-center' onSubmit={handleSubmit}>
       <h3 className='text-2xl'>User Profile</h3>
       <label>Name:</label>
-      <input
-        type='text'
-        value={userProfile.userName}
-      />
+      <input type='text' value={userProfile.userName} />
       <label>Description:</label>
-      <input
-        type='text'
-        value={userProfile.description}
-      />
+      <input type='text' value={userProfile.description} />
       <label>Location:</label>
-      <input
-        type='text'
-        value={formState.location}
-      />
+      <input type='text' value={formState.location} />
       <button>Update Profile</button>
       {/* {error && <div>{error}</div>} */}
     </form>
