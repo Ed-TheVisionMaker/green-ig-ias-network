@@ -1,10 +1,10 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useAuthStore } from '@/store/authStore';
 import { useLogin } from '@/hooks/useLogin';
 import InputBox from '@/components/InputBox';
-
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -15,7 +15,7 @@ const Login = () => {
 
   const router = useRouter();
 
-    useEffect(() => {
+  useEffect(() => {
     console.log(user, 'user set in login page');
     if (user.token.length) {
       router.push('/');
@@ -23,7 +23,7 @@ const Login = () => {
   }, [user]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    console.log("form submitted", email, password)
+    console.log('form submitted', email, password);
     e.preventDefault();
     await login(email, password);
   };
@@ -55,13 +55,12 @@ const Login = () => {
                   placeholderText='Password'
                   onChange={(e) => setPassword(e.target.value)}
                   value={password}
-
                 />
-            <div className="mb-10">
+                <div className='mb-10'>
                   <input
-                    type="submit"
-                    value="Log In"
-                    className="w-full cursor-pointer rounded-md border border-primary bg-blue-500 px-5 py-3 text-base font-medium text-black transition hover:bg-opacity-90"
+                    type='submit'
+                    value='Log In'
+                    className='w-full cursor-pointer rounded-md border border-primary bg-blue-500 px-5 py-3 text-base font-medium text-black transition hover:bg-opacity-90'
                   />
                 </div>
               </form>
@@ -135,9 +134,12 @@ const Login = () => {
               </a>
               <p className='text-base text-body-color dark:text-dark-6'>
                 <span className='pr-0.5'>Not a member yet?</span>
-                <a href='/#' className='text-primary hover:underline'>
-                  Sign Up
-                </a>
+                <Link
+                  className='text-[#7CEA23] text-lg border-2 border-transparent hover:border-2 hover:border-white py-1 px-2 rounded-xl'
+                  href='/signup'
+                >
+                  Signup
+                </Link>
               </p>
             </div>
           </div>
