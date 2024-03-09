@@ -3,7 +3,6 @@ import Link from 'next/link';
 import React, { FC } from 'react';
 import Logout from './Logout';
 import { useAuthStore } from '@/store/authStore';
-import { useUserProfileStore } from '@/store/userProfileStore';
 
 const Navbar: FC = () => {
   const user = useAuthStore((state) => state.user);
