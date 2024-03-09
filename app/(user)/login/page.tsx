@@ -1,17 +1,22 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useLogin } from '@/hooks/useLogin';
+import { useAuthStore } from '@/store/authStore';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { login, error, isLoading } = useLogin();
+  const user = useAuthStore((state) => state.user);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     await login(email, password);
   };
+
+  useEffect(() => {
+    console.log(user, 'user in auth store');
+  }, [user]);
 
   return (
     <form onSubmit={handleSubmit}>

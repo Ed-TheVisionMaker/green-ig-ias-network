@@ -14,7 +14,6 @@ const UserForm: FC = () => {
   });
 
   const user = useAuthStore((state) => state.user);
-  const updateUser = useAuthStore((state) => state.updateUser);
 
   const userProfile = useUserProfileStore((state) => state.userProfile);
 
