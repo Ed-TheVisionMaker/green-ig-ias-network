@@ -16,7 +16,6 @@ const UserForm: FC = () => {
   const userProfile = useUserProfileStore((state) => state.userProfile);
   const updateUserProfile = useUserProfileStore((state) => state.updateProfile);
 
-
   const handleSubmit = async (e: React.FormEvent): Promise<void> => {
     e.preventDefault();
     try {
@@ -26,30 +25,15 @@ const UserForm: FC = () => {
     }
   };
 
-  // useEffect(() => {
-  //   const fetchUserProfile = async () => {
-  //     const response = await axios.get<UserProfile>(`api/user/${user.userId}`, {
-  //       // const response = await authAxios.get<UserProfile>(`api/user/${user.userId}`, {
-  //       headers: {
-  //         Authorization: `Bearer ${user.token}`,
-  //       },
-  //     });
-  //     updateUserProfile(response.data);
-  //   };
-  //   if (user.token.length) {
-  //     fetchUserProfile();
-  //   }
-  // }, []);
-
   return (
     <form className='flex flex-col items-center' onSubmit={handleSubmit}>
       <h3 className='text-2xl'>User Profile</h3>
       <label>Name:</label>
-      <input type='text' value={userProfile.userName} />
+      <input type='text' value={user.userId} />
       <label>Description:</label>
-      <input type='text' value={userProfile.description} />
+      <input type='text' />
       <label>Location:</label>
-      <input type='text' value={formState.location} />
+      <input type='text' />
       <button>Update Profile</button>
       {/* {error && <div>{error}</div>} */}
     </form>
