@@ -1,8 +1,7 @@
-import axios from 'axios';
-import { useEffect } from 'react';
+import axios, { AxiosInstance } from 'axios';
 import { useAuthStore } from '@/store/authStore';
 
-const useAuthAxios = () => {
+const useAuthAxios = (): AxiosInstance => {
   const token = useAuthStore((state) => state.user.token);
 
   const authAxios = axios.create({

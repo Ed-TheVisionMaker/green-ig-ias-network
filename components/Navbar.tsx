@@ -7,7 +7,6 @@ import { useUserProfileStore } from '@/store/userProfileStore';
 
 const Navbar: FC = () => {
   const user = useAuthStore((state) => state.user);
-  // const { userId } = useUserProfileStore((state) => state.userProfile);
 
   return (
     <header className='bg-black flex justify-end py-4 pr-8 space-x-4'>

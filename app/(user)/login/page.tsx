@@ -1,13 +1,18 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { useLogin } from '@/hooks/useLogin';
-import { useAuthStore } from '@/store/authStore';
+import { useAuthStore } from '@/store/authStore'; 
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const router = useRouter();
+
   const { login, error, isLoading } = useLogin();
   const user = useAuthStore((state) => state.user);
+
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -16,6 +21,9 @@ const Login = () => {
 
   useEffect(() => {
     console.log(user, 'user set in login page');
+    if(user.token.length) {
+      router.push('/');
+    }
   }, [user]);
 
   return (
