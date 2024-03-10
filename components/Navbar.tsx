@@ -28,7 +28,7 @@ const Navbar: FC = () => {
         community
       </Link>
       <nav>
-        {user.token.length && (
+        {user.token.length > 0 && (
           <div>
             <span className='text-[#7CEA23] text-lg'>{user.email}</span>
             <Logout />
@@ -40,7 +40,7 @@ const Navbar: FC = () => {
             </Link>
           </div>
         )}
-        {!user.token.length && (
+        {user.token.length === 0 && (
           <div>
             <Link
               className='text-[#7CEA23] text-lg border-2 border-transparent hover:border-2 hover:border-white py-1 px-2 rounded-xl'

@@ -1,4 +1,10 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from "next/document";
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+} from 'next/document';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -10,7 +16,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-        <link rel="stylesheet" href="https://use.typekit.net/jrh3fcz.css" />
         </Head>
         <body>
           <Main />
@@ -22,3 +27,15 @@ class MyDocument extends Document {
 }
 
 export default MyDocument;
+
+{
+  /* <link rel="stylesheet" href="https://use.typekit.net/jrh3fcz.css" /> */
+}
+{
+  /* <link rel='preconnect' href='https://fonts.googleapis.com' />
+<link rel='preconnect' href='https://fonts.gstatic.com' />
+<link
+  href='https://fonts.googleapis.com/css2?family=Lobster&display=swap'
+  rel='stylesheet'
+/> */
+}
