@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
-import { notoSans, shantellSans } from '@/utils/fonts';
+import { comicNeue, notoSans, shantellSans } from '@/utils/fonts';
 import './/../styles/globals.css';
 
 
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className={`${notoSans.variable} ${shantellSans.variable}`}>
+    <html lang='en' className={`${notoSans.variable} ${shantellSans.variable} ${comicNeue.variable}`}>
       <body>
           <Navbar />
           {children}

@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 const Welcome: FC = () => {
   return (
     <div className='flex flex-col m-36 text-center h-screen'>
-      <h1 className='font-bold font-Lobster text-4xl'>
+      <h1 className='font-bold font-comicNeue text-4xl'>
         Welcome to the IAS Green Iguana Network
       </h1>
       <p className='text-2xl m-12'>

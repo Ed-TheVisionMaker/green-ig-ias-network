@@ -11,5 +11,5 @@ button {
 }
 
 body {
-  @apply text-red-600 font-notoSans
+  @apply font-notoSans
 }

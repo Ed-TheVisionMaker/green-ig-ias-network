@@ -11,6 +11,7 @@ const config: Config = {
         fontFamily: {
           notoSans: ['var(--font-noto-sans)'],
           shantellSans: ['var(--font-shantell-sans)'],
+          comicNeue: ['var(--font-comic-neue)'],
       },
     },
   },
