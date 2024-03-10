@@ -11,5 +11,5 @@ button {
 }
 
 body {
-  @apply font-notoSans
+  @apply font-open-sans
 }

@@ -8,10 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
-        fontFamily: {
-          notoSans: ['var(--font-noto-sans)'],
-          shantellSans: ['var(--font-shantell-sans)'],
-          comicNeue: ['var(--font-comic-neue)'],
+      fontFamily: {
+        halant: ['var(--font-halant)'],
+        'nunit-sans': ['var(--font-nunito-sans)'],
+        'open-sans': ['var(--font-open-sans)'],
+        ubuntu: ['var(--font-ubuntu)'],
       },
     },
   },
