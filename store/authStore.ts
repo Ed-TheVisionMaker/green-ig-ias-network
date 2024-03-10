@@ -11,7 +11,7 @@ export type authStore = {
 };
 
 export const useAuthStore = create<authStore>((set) => {
-  const storedUser = localStorage.getItem('user');
+  const storedUser = localStorage.getItem('user') || null;
   const initialUser = storedUser
     ? JSON.parse(storedUser)
     : { userId: '', email: '', token: '' };
