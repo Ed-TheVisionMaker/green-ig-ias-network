@@ -12,12 +12,6 @@ const Navbar: FC = () => {
       <div className='flex space-x-4'>
         <Link
           className=' text-2xl border-transparent py-1 px-2 rounded-xl'
-          href='/welcome'
-        >
-          welcome
-        </Link>
-        <Link
-          className=' text-2xl border-transparent py-1 px-2 rounded-xl'
           href='/invasive'
         >
           the invasive species
