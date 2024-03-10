@@ -15,6 +15,9 @@ const config: Config = {
         ubuntu: ['var(--font-ubuntu)'],
       },
     },
+    colors: {
+      primaryGreen: '#3c5a3e',
+    }
   },
   variants: {
     extend: {},
