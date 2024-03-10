@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import { openSans, ubuntu } from '@/utils/fonts';
-import './/../styles/globals.css';
-
+import '../styles/globals.css';
 
 export const metadata: Metadata = {
   title: 'IAS-Green Iguana Network',
