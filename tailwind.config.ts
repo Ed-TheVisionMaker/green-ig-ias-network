@@ -14,14 +14,14 @@ const config: Config = {
         'open-sans': ['var(--font-open-sans)'],
         ubuntu: ['var(--font-ubuntu)'],
       },
+      colors: {
+        primaryGreen: '#1d3932',
+        lightYellow: '#FAE3B4',
+        lightGreen: '#AAC789',
+        whiteText: '#ffffff',
+        blackText: '#052a08',
+      },
     },
-    colors: {
-      primaryGreen: '#1d3932',
-      lightYellow: '#FAE3B4',
-      lightGreen: '#AAC789',
-      whiteText: '#ffffff',
-      blackText: '#052a08'
-    }
   },
   variants: {
     extend: {},
