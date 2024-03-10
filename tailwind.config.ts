@@ -16,7 +16,11 @@ const config: Config = {
       },
     },
     colors: {
-      primaryGreen: '#3c5a3e',
+      primaryGreen: '#1d3932',
+      lightYellow: '#FAE3B4',
+      lightGreen: '#AAC789',
+      whiteText: '#ffffff',
+      blackText: '#052a08'
     }
   },
   variants: {
