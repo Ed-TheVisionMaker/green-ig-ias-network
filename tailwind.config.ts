@@ -9,6 +9,8 @@ const config: Config = {
   theme: {
     extend: {
         fontFamily: {
+          notoSans: ['var(--font-noto-sans)'],
+          shantellSans: ['var(--font-shantell-sans)'],
       },
     },
   },
