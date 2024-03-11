@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { useAuthStore } from '@/store/authStore';
+import localStorageAvailable from '@/utils/localStorage';
 
 type ErrorMessage = {
   error: string;
@@ -22,7 +23,9 @@ export const useSignup = () => {
       });
       const user = response.data;
       // save user to local storage (JWT and email property)
-      localStorage.setItem('user', JSON.stringify({ user }));
+      if (localStorageAvailable()) {
+        localStorage.setItem('user', JSON.stringify({ user }));
+      }
       userLoggedIn(user);
     } catch (error: any) {
       setIsLoading(false);
