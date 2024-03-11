@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useAuthStore } from '@/store/authStore';
 import { useLogin } from '@/hooks/useLogin';
 import InputBox from '@/components/InputBox';
+import '../../../styles/informationPages.css'
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -28,11 +29,11 @@ const Login = () => {
     await login(email, password);
   };
   return (
-    <section className='bg-gray-1 py-20 dark:bg-dark lg:py-[120px]'>
+    <section className='bg-gray-1 py-20 dark:bg-dark lg:py-[120px] bg-darkGreen'>
       <div className='container mx-auto'>
         <div className='-mx-4 flex flex-wrap'>
           <div className='w-full px-4'>
-            <div className='relative mx-auto max-w-[525px] overflow-hidden rounded-lg bg-white px-10 py-16 text-center dark:bg-dark-2 sm:px-12 md:px-[60px]'>
+            <div className='relative mx-auto max-w-[525px] overflow-hidden rounded-lg bg-mediumGreen border-2 border-lightGreen px-10 py-16 text-center dark:bg-dark-2 sm:px-12 md:px-[60px]'>
               <div className='mb-10 text-center md:mb-16'>
                 <a href='/#' className='mx-auto inline-block max-w-[160px]'>
                   <img
@@ -60,11 +61,11 @@ const Login = () => {
                   <input
                     type='submit'
                     value='Log In'
-                    className='w-full cursor-pointer rounded-md border border-primary bg-blue-500 px-5 py-3 text-base font-medium text-black transition hover:bg-opacity-90'
+                    className='w-full cursor-pointer rounded-md border border-lightGreen bg-ginBlue px-5 py-3 text-base font-medium text-ginWhite transition hover:bg-opacity-90'
                   />
                 </div>
               </form>
-              <p className='mb-6 text-base text-secondary-color dark:text-dark-7'>
+              <p className='mb-6 text-base text-ginBlack dark:text-dark-7'>
                 Connect With
               </p>
               <ul className='-mx-2 mb-12 flex justify-between'>
@@ -90,7 +91,7 @@ const Login = () => {
                 <li className='w-full px-2'>
                   <a
                     href='/#'
-                    className='flex h-11 items-center justify-center rounded-md bg-[#1C9CEA] hover:bg-opacity-90'
+                    className='flex h-11 items-center justify-center rounded-md bg-ginBlue hover:bg-opacity-90'
                   >
                     <svg
                       width='22'
@@ -128,17 +129,17 @@ const Login = () => {
               </ul>
               <a
                 href='/#'
-                className='mb-2 inline-block text-base text-dark hover:text-primary hover:underline dark:text-white'
+                className='mb-8 inline-block text-base text-ginBlack hover:text-primary hover:underline'
               >
                 Forget Password?
               </a>
-              <p className='text-base text-body-color dark:text-dark-6'>
-                <span className='pr-0.5'>Not a member yet?</span>
+              <p className='text-base text-body-color text-ginBlack'>
+                <span className='pr-0.5 mr-4'>Not a member yet?</span>
                 <Link
-                  className='text-[#7CEA23] text-lg border-2 border-transparent hover:border-2 hover:border-white py-1 px-2 rounded-xl'
+                  className='text-ginWhite text-lg bg-ginBlue hover:bg-opacity-90 py-3 px-8 rounded-xl'
                   href='/signup'
                 >
-                  Signup
+                  Sign Up
                 </Link>
               </p>
             </div>

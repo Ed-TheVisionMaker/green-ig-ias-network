@@ -9,7 +9,7 @@ interface InputBoxProps {
 const InputBox = ({ inputType = 'text', placeholderText = '', inputName = '', value = '', onChange }: InputBoxProps) => {
   return (
     <div className="mb-6">
-      <label htmlFor={inputName}>{placeholderText}</label>
+      <label htmlFor={inputName} className=''>{placeholderText}</label>
       <input
         type={inputType}
         placeholder={placeholderText}
@@ -17,7 +17,7 @@ const InputBox = ({ inputType = 'text', placeholderText = '', inputName = '', va
         id={inputName}
         defaultValue={''}
         onChange={(e) => onChange(e)}
-        className="w-full rounded-md border border-stroke bg-transparent px-5 py-3 text-black outline-none focus:border-primary focus-visible:shadow-none"
+        className="w-full rounded-md mt-1 border border-stroke bg-ginWhite px-5 py-3 text-black outline-none focus:border-primary focus-visible:shadow-none"
       />
     </div>
   );

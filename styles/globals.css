@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 input {
-  @apply text-blackText px-4 py-2;
+  @apply text-ginBlack px-4 py-2;
 }
 
 button {

@@ -8,7 +8,7 @@ const Navbar: FC = () => {
   const user = useAuthStore((state) => state.user);
 
   return (
-    <header className='bg-lightGreen shadow-md shadow-blackText flex justify-between py-4 pl-44'>
+    <header className='bg-lightGreen shadow-md shadow-ginBlack flex justify-between py-4 pl-44'>
       <div className='flex space-x-4'>
       <Link
           className=' text-2xl border-transparent py-1 px-2 rounded-xl'

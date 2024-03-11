@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import '../../styles/informationPages.css';
 
 const Invasive: FC = () => (
-  <div className='flex flex-col text-left justify-start text-whiteText pt-36 px-48 bg-primaryGreen'>
+  <div className='flex flex-col text-left justify-start text-ginWhite pt-36 px-48 bg-darkGreen'>
     <h1 className='font-ubuntu mb-12'>
       The Green Iguana: An Invasive Alien Species
     </h1>
