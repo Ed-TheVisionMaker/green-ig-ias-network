@@ -15,11 +15,12 @@ const config: Config = {
         ubuntu: ['var(--font-ubuntu)'],
       },
       colors: {
-        primaryGreen: '#1d3932',
-        lightYellow: '#FAE3B4',
-        lightGreen: '#AAC789',
-        whiteText: '#ffffff',
-        blackText: '#052a08',
+        darkGreen: '#1D3932',
+        mediumGreen: '#9CCD76', //do not use as a text background - low accessibility score
+        lightGreen: '#CBE8BA',
+        ginBlue: '#023A5B',
+        ginWhite: '#ffffff',
+        ginBlack: '#021A04',
       },
     },
   },

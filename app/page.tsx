@@ -5,7 +5,7 @@ import '../styles/informationPages.css'
 
 const Home: FC = () => {
   return (
-      <div className='flex flex-col text-left justify-start pt-36 pl-48 h-screen bg-primaryGreen'>
+      <div className='flex flex-col text-left justify-start pt-36 pl-48 h-screen bg-darkGreen'>
         <h1 className=''>
           Welcome to the<br />IAS Green Iguana Network
         </h1>

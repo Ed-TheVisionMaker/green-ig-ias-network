@@ -1,6 +1,6 @@
 
 p {
-  @apply text-3xl font-open-sans text-whiteText;
+  @apply text-3xl font-open-sans text-ginWhite;
 }
 
 li {
@@ -8,10 +8,13 @@ li {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply font-ubuntu text-whiteText;
+  @apply font-ubuntu text-ginWhite;
 }
-
 
 h1 {
   @apply text-6xl;
+}
+
+input {
+  @apply border border-ginBlack text-ginBlack placeholder-ginBlack;
 }
