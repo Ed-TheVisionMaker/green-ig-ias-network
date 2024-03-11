@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import localStorageAvailable from '@/utils/localStorage';
 
 export type authStore = {
   user: {
@@ -11,7 +12,11 @@ export type authStore = {
 };
 
 export const useAuthStore = create<authStore>((set) => {
-  const storedUser = localStorage.getItem('user') || null;
+  let storedUser = null;
+  if (localStorageAvailable()) {
+    storedUser = localStorage.getItem('user');
+  }
+
   const initialUser = storedUser
     ? JSON.parse(storedUser)
     : { userId: '', email: '', token: '' };

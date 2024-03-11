@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { useAuthStore } from '@/store/authStore';
+import localStorageAvailable from '@/utils/localStorage';
 
 type ErrorMessage = {
   error: string;
@@ -20,7 +21,9 @@ export const useLogin = () => {
       const response = await axios.post('/api/user/login', { email, password });
       const user = response.data;
 
-      localStorage.setItem('user', JSON.stringify(user));
+      if(localStorageAvailable()) {
+        localStorage.setItem('user', JSON.stringify(user));
+      }
       userLoggedIn(user);
     } catch (error: any) {
       setIsLoading(false);
