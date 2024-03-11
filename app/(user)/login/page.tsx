@@ -65,7 +65,7 @@ const Login = () => {
                   />
                 </div>
               </form>
-              <p className='mb-6 text-base text-ginBlack dark:text-dark-7'>
+              <p className='mb-2 text-base text-ginBlack dark:text-dark-7'>
                 Connect With
               </p>
               <ul className='-mx-2 mb-12 flex justify-between'>
@@ -129,7 +129,7 @@ const Login = () => {
               </ul>
               <a
                 href='/#'
-                className='mb-8 inline-block text-base text-ginBlack hover:text-primary hover:underline'
+                className='mb-4 inline-block text-base text-ginBlack hover:text-primary hover:underline'
               >
                 Forget Password?
               </a>
