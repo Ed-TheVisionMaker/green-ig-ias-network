@@ -32,7 +32,7 @@ const Navbar: FC = () => {
       <nav className='flex space-x-4 pr-16'>
         {user.token.length > 0 && (
           <div>
-            <span className='text-[#7CEA23] text-lg'>{user.email}</span>
+            <span className='text-ginBlack text-xl mr-3'>{user.email}</span>
             <Logout />
             <Link
               href={`/${user.userId}`}
