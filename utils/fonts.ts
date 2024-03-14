@@ -17,7 +17,7 @@ export const halant = Halant({
   weight: ['300', '400', '500', '600', '700'],
 });
 
-// paragrah
+// paragraph
 export const nunitoSans = Nunito_Sans({
   subsets: ['latin'],
   variable: '--font-nunito-sans',
