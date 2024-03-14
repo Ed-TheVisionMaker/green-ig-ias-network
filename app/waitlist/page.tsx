@@ -1,9 +1,24 @@
+'use client'
 import { useState } from 'react';
+import axios, { AxiosError } from 'axios';
 export default function Waitlist() {
   const [email, setEmail] = useState('')
+  const [error, setError] = useState<string | null>(null)
+
+  const registerEmail = async (email: string) => {
+    try {
+      await axios.post('/api/waitlist/register-email', {
+        email
+      })
+    } catch (error) {
+      const axiosError = error as AxiosError
+      setError(axiosError.response?.data as string)
+    }
+  }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    registerEmail(email)
 
   };
   return (
