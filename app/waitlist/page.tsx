@@ -36,7 +36,6 @@ export default function Waitlist() {
               <input
                 id="email-address"
                 name="email"
-                type="email"
                 autoComplete="email"
                 value={email}
                 required

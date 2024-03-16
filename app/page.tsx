@@ -1,6 +1,7 @@
 'use client';
 
 import React, { FC } from 'react';
+import Waitlist from '@/components/Waitlist.tsx';
 import Image from 'next/image';
 import '../styles/informationPages.css';
 
@@ -20,6 +21,7 @@ const Home: FC = () => {
           A place for people to connect and collaborate to control <br />
           the spread of green iguanas as an Invasive Alien Species
         </p>
+        <Waitlist />
       </div>
     </div>
   );
