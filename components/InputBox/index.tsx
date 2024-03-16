@@ -1,3 +1,6 @@
+'useClient'
+import { useEffect, useState } from 'react';
+
 interface InputBoxProps {
     inputType: string;
     placeholderText: string;
@@ -7,10 +10,15 @@ interface InputBoxProps {
 }
 
 const InputBox = ({ inputType = 'text', placeholderText = '', inputName = '', value = '', onChange }: InputBoxProps) => {
+  const[isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
   return (
     <div className="mb-6">
       <label htmlFor={inputName} className=''>{placeholderText}</label>
-      <input
+      {isClient &&(<input
         type={inputType}
         placeholder={placeholderText}
         name={inputName}
@@ -18,7 +26,7 @@ const InputBox = ({ inputType = 'text', placeholderText = '', inputName = '', va
         defaultValue={''}
         onChange={(e) => onChange(e)}
         className="w-full rounded-md mt-1 border border-stroke bg-ginWhite px-5 py-3 text-black outline-none focus:border-primary focus-visible:shadow-none"
-      />
+      />)}
     </div>
   );
 };
