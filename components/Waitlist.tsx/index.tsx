@@ -23,10 +23,9 @@ export default function Waitlist() {
   
     };
     return (
-      <div className="bg-white py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="relative isolate flex flex-col gap-10 overflow-hidden bg-gray-900 px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-24 xl:flex-row xl:items-center xl:py-32">
-            <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl xl:max-w-none xl:flex-auto">
+      <div className=" py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl  sm:px-6 lg:px-8">
+            <h2 className="max-w-2xl text-3xl font-bold tracking-tight sm:pb-6 lg:pb-8 text-white sm:text-4xl xl:max-w-none xl:flex-auto">
               Get notified when we&#39;re launching.
             </h2>
             <form className="w-full max-w-md" onSubmit={handleSubmit}>
@@ -59,7 +58,6 @@ export default function Waitlist() {
                 .
               </p>
             </form>
-          </div>
         </div>
       </div>
     )
