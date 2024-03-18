@@ -36,7 +36,7 @@ export default function Waitlist() {
             {showAnimation && (
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-gray-900 to-transparent"></div>
             )}
-            <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl sm:px-12 lg:px-16">
                 <h2 className="max-w-2xl text-3xl font-bold tracking-tight sm:pb-6 lg:pb-8 text-white sm:text-4xl xl:max-w-none xl:flex-auto">
                     Get notified when we're launching.
                 </h2>
