@@ -14,8 +14,11 @@ const Navbar: FC = () => {
     <header className='bg-lightGreen shadow-md shadow-ginBlack flex justify-between align-items py-4 pl-44'>
       <div className='flex w-full justify-between'>
         <div className='flex space-x-4'>
-          <Link className=' text-2xl px-2 rounded-xl' href='/'>
+        <Link className=' text-2xl px-2 rounded-xl' href='/'>
             home
+          </Link>
+          <Link className=' text-2xl px-2 rounded-xl' href='/hero'>
+            hero
           </Link>
           <Link className=' text-2xl px-2 rounded-xl' href='/invasive'>
             the invasive species
