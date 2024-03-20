@@ -18,7 +18,7 @@ const config: Config = {
         darkGreen: '#1D3932',
         mediumGreen: '#9CCD76', //do not use as a text background - low accessibility score
         lightGreen: '#CBE8BA',
-        ginBlue: '#023A5B',
+        ginBlue: '#0f1be3',
         ginWhite: '#ffffff',
         ginBlack: '#021A04',
       },
