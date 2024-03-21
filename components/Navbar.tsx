@@ -17,9 +17,6 @@ const Navbar: FC = () => {
         <Link className=' text-2xl px-2 rounded-xl' href='/'>
             home
           </Link>
-          <Link className=' text-2xl px-2 rounded-xl' href='/hero'>
-            hero
-          </Link>
           <Link className=' text-2xl px-2 rounded-xl' href='/invasive'>
             the invasive species
           </Link>
