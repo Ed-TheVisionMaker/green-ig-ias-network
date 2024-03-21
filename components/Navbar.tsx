@@ -41,12 +41,12 @@ const Navbar: FC = () => {
             <div className='flex'>
               <div className='flex items-center'>
                 <p className='text-ginBlack text-2xl mr-4'>Register your interest</p>
-              <button
-                className=' text-xl text-ginWhite bg-ginBlue border-2 border-mediumGreen shadow-mediumGreen pt-1 pb-2 mr-3 px-3 rounded-xl'
-                onClick={toggleModal}
+              <Link
+              href='#waitlist'
+                className=' text-xl text-ginWhite bg-ginBlue border-2 border-mediumGreen shadow-mediumGreen pt-1 pb-2 mr-24 px-3 rounded-xl'
               >
                 Waitlist
-              </button>
+              </Link>
               </div>
               {/* <button
                 className=' text-xl text-ginWhite bg-ginBlue border-2 border-mediumGreen shadow-mediumGreen pt-1 pb-2 mr-3 px-3 rounded-xl'

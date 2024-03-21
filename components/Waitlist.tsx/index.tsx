@@ -32,7 +32,9 @@ export default function Waitlist() {
     };
   
     return (
-        <div className="relative bg-lightGreen p-8 rounded-3xl">
+        <div 
+        id='waitlist'
+        className="relative bg-lightGreen p-8 rounded-3xl">
             {showAnimation && (
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-gray-900 to-transparent"></div>
             )}
