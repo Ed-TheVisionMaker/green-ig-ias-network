@@ -1,4 +1,5 @@
 'use client';
+import InvasiveSpeciesHero from '@/components/InvasiveSpeciesHero';
 // import { useState } from 'react';
 import Waitlist from '@/components/Waitlist.tsx';
 // import Image from 'next/image';
@@ -214,6 +215,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+              <InvasiveSpeciesHero />
             </div>
           </div>
         </div>
