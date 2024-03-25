@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
@@ -8,6 +9,8 @@ function classNames(...classes: string[]) {
 }
 
 export default function Navbar() {
+  const pathname = usePathname();
+
   return (
     <Disclosure as='nav' className='bg-white shadow'>
       {({ open }) => (
@@ -37,19 +40,25 @@ export default function Navbar() {
                 <div className='hidden sm:ml-6 sm:flex sm:space-x-8'>
                   {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
                   <Link
-                    className='inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900'
+                    className={`inline-flex items-center ${
+                      pathname === '/' ? 'border-indigo-500' : 'border-transparent'
+                    } border-b-2 hover:border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900`}
                     href='/'
                   >
                     home
                   </Link>
                   <Link
-                    className='inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900'
+                    className={`inline-flex items-center  ${
+                      pathname === '/invasive' ? 'border-indigo-500' : 'border-transparent'
+                    } border-b-2 hover:border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900`}
                     href='/invasive'
                   >
                     the invasive species
                   </Link>
                   <Link
-                    className='inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900'
+                    className={`inline-flex items-center  ${
+                      pathname === '/community' ? 'border-indigo-500' : 'border-transparent'
+                    } border-b-2 hover:border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900`}
                     href='/community'
                   >
                     community
