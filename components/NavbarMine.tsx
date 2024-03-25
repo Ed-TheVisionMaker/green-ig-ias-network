@@ -6,7 +6,7 @@ import WaitlistModal from './WaitlistModal';
 import { useAuthStore } from '@/store/authStore';
 import { useWaitlistStore } from '@/store/waitlistStore';
 
-const Navbar: FC = () => {
+const NavbarMine: FC = () => {
   const user = useAuthStore((state) => state.user);
   const { showModal, toggleModal } = useWaitlistStore();
 
@@ -81,4 +81,4 @@ const Navbar: FC = () => {
   );
 };
 
-export default Navbar;
+export default NavbarMine;
