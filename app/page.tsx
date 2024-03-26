@@ -9,7 +9,7 @@ export default function Home() {
         <div className='overflow-hidden'>
           <div className='flex flex-col items-center border-black border'>
             <div className='w-full max-w-2xl lg:mx-0 lg:flex lg:max-w-none lg:items-center'>
-              <div className='relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl'>
+              <div className='relative w-full'>
                 <h1 className='text-4xl font-bold tracking-tight text-ginBlack sm:text-6xl'>
                   Welcome to the IAS Green Iguana Network
                 </h1>
