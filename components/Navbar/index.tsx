@@ -1,8 +1,6 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Disclosure } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -12,7 +10,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
+    <div className='w-full border-2 border-blue'>
       <div className='relative flex h-16 justify-between'>
         <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'></div>
         <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
@@ -58,7 +56,7 @@ export default function Navbar() {
           <p className='text-ginBlack text-sm mr-4'>Register your interest</p>
           <Link
             href='#waitlist'
-            className=' text-md text-ginBlack bg-pistachio border-2 border-teaGreen shadow-teaGreen pt-1 pb-2 mr-24 px-3 rounded-xl'
+            className=' text-md text-ginBlack bg-pistachio border-2 border-teaGreen shadow-teaGreen pt-1 pb-2 px-3 rounded-xl'
           >
             Waitlist
           </Link>
