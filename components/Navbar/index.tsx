@@ -41,24 +41,24 @@ export default function Navbar() {
                   {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
                   <Link
                     className={`inline-flex items-center ${
-                      pathname === '/' ? 'border-indigo-500' : 'border-transparent'
-                    } border-b-2 hover:border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900`}
+                      pathname === '/' ? 'border-pistachio' : 'border-transparent'
+                    } border-b-2 hover:border-pistachio px-1 pt-1 text-sm font-medium text-ginBlack`}
                     href='/'
                   >
                     home
                   </Link>
                   <Link
                     className={`inline-flex items-center  ${
-                      pathname === '/invasive' ? 'border-indigo-500' : 'border-transparent'
-                    } border-b-2 hover:border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900`}
+                      pathname === '/invasive' ? 'border-pistachio' : 'border-transparent'
+                    } border-b-2 hover:border-pistachio px-1 pt-1 text-sm font-medium text-ginBlack`}
                     href='/invasive'
                   >
                     the invasive species
                   </Link>
                   <Link
                     className={`inline-flex items-center  ${
-                      pathname === '/community' ? 'border-indigo-500' : 'border-transparent'
-                    } border-b-2 hover:border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900`}
+                      pathname === '/community' ? 'border-pistachio' : 'border-transparent'
+                    } border-b-2 hover:border-pistachio px-1 pt-1 text-sm font-medium text-ginBlack`}
                     href='/community'
                   >
                     community
