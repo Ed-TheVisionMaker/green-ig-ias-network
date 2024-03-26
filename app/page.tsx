@@ -2,16 +2,15 @@
 import InvasiveSpeciesHero from '@/components/InvasiveSpeciesHero';
 import Waitlist from '@/components/Waitlist.tsx';
 
-
 export default function Home() {
   return (
     <div className='bg-white'>
       <div className='relative isolate'>
         <div className='overflow-hidden'>
-          <div className='mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32'>
-            <div className='mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center'>
+          <div className='mx-auto max-w-7xl'>
+            <div className='mx-auto max-w-2xl lg:mx-0 lg:flex lg:max-w-none lg:items-center'>
               <div className='relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl'>
-                <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
+                <h1 className='text-4xl font-bold tracking-tight text-ginBlack sm:text-6xl'>
                   Welcome to the IAS Green Iguana Network
                 </h1>
                 <p className='mt-6 text-2xl leading-8 text-gray-600 sm:max-w-md lg:max-w-none'>
@@ -41,7 +40,6 @@ export default function Home() {
                       alt=''
                       className='aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg'
                     />
-                    <div className='pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10' />
                   </div>
                   <div className='relative'>
                     <img
@@ -49,7 +47,6 @@ export default function Home() {
                       alt='/scott_pixabay_green_ig'
                       className='aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg'
                     />
-                    <div className='pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10' />
                   </div>
                 </div>
                 <div className='w-44 flex-none space-y-8 pt-32 sm:pt-0'>
@@ -59,7 +56,6 @@ export default function Home() {
                       alt='/susan_pixabay_green_ig.jpg'
                       className='aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg'
                     />
-                    <div className='pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10' />
                   </div>
                   <div className='relative'>
                     <img
@@ -67,7 +63,6 @@ export default function Home() {
                       alt=''
                       className='aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg'
                     />
-                    <div className='pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10' />
                   </div>
                 </div>
               </div>
