@@ -55,11 +55,10 @@ export default function Navbar() {
           </div>
         </div>
         <div className='flex items-center'>
-          <p className='mr-4'>Register your interest</p>
-
+          <p className='text-ginBlack text-sm mr-4'>Register your interest</p>
           <Link
             href='#waitlist'
-            className=' text-xl text-ginWhite bg-ginBlue border-2 border-mediumGreen shadow-mediumGreen pt-1 pb-2 mr-24 px-3 rounded-xl'
+            className=' text-md text-ginBlack bg-pistachio border-2 border-teaGreen shadow-teaGreen pt-1 pb-2 mr-24 px-3 rounded-xl'
           >
             Waitlist
           </Link>
