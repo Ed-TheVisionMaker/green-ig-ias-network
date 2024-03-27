@@ -32,7 +32,7 @@ export default function Waitlist() {
     return (
         <div 
         id='waitlist'
-        className="relative bg-lightGreen rounded-3xl">
+        className="relative rounded-3xl bg-teaGreen p-6">
             {showAnimation && (
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-gray-900 to-transparent"></div>
             )}
@@ -40,7 +40,7 @@ export default function Waitlist() {
                 <h2 className="font-bold text-2xl tracking-tight text-ginBlack">
                     Get notified when we're launching.
                 </h2>
-                <form className="w-full max-w-md mt-8" onSubmit={handleSubmit}>
+                <form className="w-full max-w-md mt-4" onSubmit={handleSubmit}>
                     <div className="flex gap-x-">
                         <label htmlFor="email-address" className="sr-only">
                             Email address

@@ -8,7 +8,8 @@ export default function Home() {
       <div className='relative isolate px-24 pt-24'>
           <div className='flex flex-col items-center'>
             <div className='w-full max-w-2xl lg:mx-0 lg:flex lg:max-w-none '>
-              <div className='relative w-full'>
+              <div className='relative flex flex-col w-full'>
+                <div>
                 <h1 className='text-4xl font-bold tracking-tight text-ginBlack sm:text-6xl mt-6'>
                   Welcome to the IAS<br />Green Iguana Network
                 </h1>
@@ -17,6 +18,8 @@ export default function Home() {
                   <br />
                   the spread of green iguanas as an Invasive Alien Species
                 </p>
+
+                </div>
                 <div className='mt-10 flex items-center gap-x-6'>
                 </div>
                   <Waitlist />
