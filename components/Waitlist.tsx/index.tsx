@@ -56,7 +56,7 @@ export default function Waitlist() {
                         />
                         <button
                             type="submit"
-                            className="flex-none rounded-md bg-ginBlue px-3.5 py-2.5 text-sm font-semibold text-ginWhite shadow-sm hover:bg-darkGreen focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                            className="flex-none rounded-md bg-pistachio px-3.5 py-2.5 text-sm font-semibold text-ginBlack shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                         >
                             Notify me
                         </button>
