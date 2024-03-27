@@ -9,8 +9,8 @@ export default function Home() {
           <div className='flex flex-col items-center'>
             <div className='w-full max-w-2xl lg:mx-0 lg:flex lg:max-w-none '>
               <div className='relative w-full'>
-                <h1 className='text-4xl font-bold tracking-tight text-ginBlack sm:text-6xl'>
-                  Welcome to the IAS Green Iguana Network
+                <h1 className='text-4xl font-bold tracking-tight text-ginBlack sm:text-6xl mt-6'>
+                  Welcome to the IAS<br />Green Iguana Network
                 </h1>
                 <p className='mt-6 text-2xl leading-8 text-gray-600 sm:max-w-md lg:max-w-none'>
                   A place for people to connect and collaborate to control{' '}
