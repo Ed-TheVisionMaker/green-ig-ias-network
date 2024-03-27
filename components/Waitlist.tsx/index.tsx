@@ -37,11 +37,11 @@ export default function Waitlist() {
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-gray-900 to-transparent"></div>
             )}
             <div className="">
-                <h2 className="font-bold text-ginBlack">
+                <h2 className="font-bold text-2xl tracking-tight text-ginBlack">
                     Get notified when we're launching.
                 </h2>
-                <form className="w-full max-w-md" onSubmit={handleSubmit}>
-                    <div className="flex gap-x-4">
+                <form className="w-full max-w-md mt-8" onSubmit={handleSubmit}>
+                    <div className="flex gap-x-">
                         <label htmlFor="email-address" className="sr-only">
                             Email address
                         </label>
@@ -51,7 +51,7 @@ export default function Waitlist() {
                             autoComplete="email"
                             value={email}
                             className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-ginBlack shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-ginBlack    sm:text-sm sm:leading-6"
-                            placeholder="Enter your email"
+                            placeholder="Enter your email here"
                             onChange={(e) => setEmail(e.target.value)}
                         />
                         <button
@@ -61,9 +61,9 @@ export default function Waitlist() {
                             Notify me
                         </button>
                     </div>
-                    <p className="mt-4 text-sm leading-6 text-gray-300">
+                    <p className="mt-4 text-sm leading-6 text-ginBlack">
                         We care about your data. Read our{' '}
-                        <a href="#" className="font-semibold text-white">
+                        <a href="#" className="font-semibold">
                             privacy policy
                         </a>
                         .
