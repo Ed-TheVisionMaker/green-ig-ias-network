@@ -1,12 +1,12 @@
 export default function InvasiveSpeciesHero() {
   return (
-    <div className='bg-ginWhite'>
+    <div className='bg-pistachio rounded-xl mt-24'>
       <div className=''>
         <div className=''>
-          <h1 className='mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+          <h1 className='mt-2 text-4xl font-bold tracking-tight text-ginBlack sm:text-4xl'>
             The Invasive Species
           </h1>
-          <div className='mt-10 grid grid-cols-1 gap-8 text-base leading-7 text-gray-700 lg:grid-cols-2 border border-black'>
+          <div className='mt-10 grid grid-cols-1 gap-8 text-base leading-7 text-ginBlack lg:grid-cols-2 '>
             <div>
               <p>
                 The Green Iguana (Iguana iguana), known for its vibrant green
@@ -34,7 +34,7 @@ export default function InvasiveSpeciesHero() {
           <div className='mt-10 flex'>
             <a
               href='/invasive'
-              className='rounded-md bg-ginBlue px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+              className='rounded-md bg-ginBlue px-3.5 py-2.5 text-sm font-semibold text-ginBlack shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
             >
               Learn more
             </a>
