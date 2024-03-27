@@ -22,13 +22,11 @@ export default function Waitlist() {
         e.preventDefault();
         registerEmail(email);
         
-        // Show the animation when the form is submitted
         setShowAnimation(true);
         
-        // Hide the animation after a certain duration (you can adjust the timing)
         setTimeout(() => {
             setShowAnimation(false);
-        }, 2000); // 2000 milliseconds (2 seconds) as an example
+        }, 2000);
     };
   
     return (
