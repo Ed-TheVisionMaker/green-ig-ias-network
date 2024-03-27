@@ -41,8 +41,8 @@ export default function InvasiveSpeciesHero() {
           </div>
         </div>
       </div>
-      <div className='relative overflow-hidden pt-16 lg:pt-20'>
-        <div className='mx-auto max-w-7xl px-6 lg:px-8'>
+      <div className='relative overflow-hidden'>
+        <div className=''>
           <img
             className='mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10'
             src='/green-ig-invasive.jpeg'
