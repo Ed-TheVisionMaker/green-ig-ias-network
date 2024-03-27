@@ -2,16 +2,12 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
-}
-
 export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <div className='w-full border-2 border-blue'>
-      <div className='relative flex h-16 justify-between px-12'>
+    <div className='w-full'>
+      <div className='relative flex h-16 justify-between px-8'>
         <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'></div>
         <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
           <div className='flex flex-shrink-0 items-center'>
