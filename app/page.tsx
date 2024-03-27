@@ -5,9 +5,9 @@ import Waitlist from '@/components/Waitlist.tsx';
 export default function Home() {
   return (
     <div className='bg-ginWhite'>
-      <div className='relative isolate px-8 pt-24'>
+      <div className='relative isolate px-24 pt-24'>
           <div className='flex flex-col items-center'>
-            <div className='w-full max-w-2xl lg:mx-0 lg:flex lg:max-w-none lg:items-center'>
+            <div className='w-full max-w-2xl lg:mx-0 lg:flex lg:max-w-none '>
               <div className='relative w-full'>
                 <h1 className='text-4xl font-bold tracking-tight text-ginBlack sm:text-6xl'>
                   Welcome to the IAS Green Iguana Network
