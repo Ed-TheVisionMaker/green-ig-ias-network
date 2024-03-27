@@ -32,12 +32,12 @@ export default function Waitlist() {
     return (
         <div 
         id='waitlist'
-        className="relative bg-lightGreen p-8 rounded-3xl">
+        className="relative bg-lightGreen rounded-3xl">
             {showAnimation && (
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-gray-900 to-transparent"></div>
             )}
-            <div className="mx-auto max-w-7xl">
-                <h2 className="max-w-2xl text-3xl font-bold tracking-tight sm:pb-6 lg:pb-8 text-ginBlack sm:text-4xl xl:max-w-none xl:flex-auto">
+            <div className="">
+                <h2 className="font-bold text-ginBlack">
                     Get notified when we're launching.
                 </h2>
                 <form className="w-full max-w-md" onSubmit={handleSubmit}>
