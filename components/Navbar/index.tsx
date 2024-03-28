@@ -6,7 +6,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <div className='w-full'>
+    <div className='w-full font-ubuntu  bg-gradient-to-r from-teaGreen to-ginWhite'>
       <div className='relative flex h-16 justify-between ml-1.5 pl-20 pr-24'>
         <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'></div>
         <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
@@ -48,11 +48,11 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
-        <div className='flex items-center'>
-          <p className='text-ginBlack text-sm mr-4'>Register your interest</p>
+        <div className='flex items-center font-ubuntu'>
+          <p className='text-ginBlack  text-sm font-medium mr-4'>Register your interest</p>
           <Link
             href='#waitlist'
-            className=' text-md text-ginBlack bg-pistachio border-2 border-teaGreen shadow-teaGreen pt-1 pb-2 px-3 rounded-xl'
+            className=' text-md text-ginBlack font-bold bg-pistachio border-2 border-teaGreen shadow-teaGreen pt-1 pb-2 px-3 rounded-xl'
           >
             Waitlist
           </Link>
