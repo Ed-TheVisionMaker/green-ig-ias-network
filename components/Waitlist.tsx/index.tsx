@@ -36,7 +36,7 @@ export default function Waitlist() {
             {showAnimation && (
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-gray-900 to-transparent"></div>
             )}
-            <div className="">
+            <div className="border border-pistachio w-max py-8 pl-8 pr-32 rounded-lg">
                 <div>
                 <h2 className="font-bold text-3xl tracking-tight text-ginBlack">
                     Get notified when we're launching.
