@@ -1,6 +1,9 @@
 export default function InvasiveSpeciesHero() {
   return (
-    <div className='bg-pistachio rounded-xl mt-24'>
+    <div className='bg-ginWhite rounded-xl mt-24'>
+      <div className='h-28 bg-gradient-to-r from-teaGreen/50 to-ginWhite rounded-lg'>
+
+      </div>
       <div className=''>
         <div className=''>
           <h1 className='mt-2 text-4xl font-bold tracking-tight text-ginBlack sm:text-4xl'>
