@@ -6,7 +6,7 @@ export default function InvasiveSpeciesHero() {
       </div>
       <div className=''>
         <div className=''>
-          <h1 className='mt-2 text-4xl font-bold tracking-tight text-ginBlack sm:text-4xl'>
+          <h1 className='mt-2 text-4xl font-ubuntu font-bold tracking-tight text-ginBlack'>
             The Invasive Species
           </h1>
           <div className='mt-10 grid grid-cols-1 gap-8 text-base leading-7 text-ginBlack lg:grid-cols-2 '>
