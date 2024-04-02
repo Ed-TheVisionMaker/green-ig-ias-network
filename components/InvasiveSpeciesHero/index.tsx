@@ -4,7 +4,7 @@ export default function InvasiveSpeciesHero() {
       <div className='flex'>
         <div className='h-28 bg-gradient-to-r from-teaGreen/50 to-ginWhite rounded-lg'></div>
         <div className=''>
-          <h1 className='mt-2 mb-6 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack'>
+          <h1 className='mt-2 mb-8 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack'>
             The Invasive Species
           </h1>
           <div className='flex relative'>

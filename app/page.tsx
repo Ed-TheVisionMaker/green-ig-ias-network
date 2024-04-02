@@ -1,11 +1,12 @@
 'use client';
+import CommunityHero from '@/components/CommunityHero';
 import InvasiveSpeciesHero from '@/components/InvasiveSpeciesHero';
 import Waitlist from '@/components/Waitlist.tsx';
 
 export default function Home() {
   return (
     <div className='bg-ginWhite'>
-      <div className='relative isolate px-24 pt-24'>
+      <div className='relative isolate px-32 pt-24'>
           <div className='flex flex-col items-center'>
             <div className='w-full max-w-2xl lg:mx-0 lg:flex lg:max-w-none '>
               <div className='relative flex flex-col w-full'>
@@ -70,6 +71,7 @@ export default function Home() {
               </div>
             </div>
             <InvasiveSpeciesHero />
+            <CommunityHero />
           </div>
       </div>
     </div>
