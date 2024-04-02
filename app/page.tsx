@@ -20,7 +20,7 @@ export default function Home() {
                 </p>
 
                 </div>
-                <div className='mt-10 flex items-center gap-x-6'>
+                <div className='flex items-center'>
                 </div>
                   <Waitlist />
               </div>

@@ -52,9 +52,10 @@ export default function Navbar() {
           <p className='text-ginBlack  text-sm font-medium'>Register your interest</p>
           <Link
             href='#waitlist'
+            // className='px-3.5 py-2.5 ml-8 text-sm font-semibold text-ginBla'
             className='px-3.5 py-2.5 ml-8 text-sm font-semibold text-ginBlack  bg-pistachio border-2 border-teaGreen shadow-teaGreen rounded-xl'
           >
-            Waitlist
+            Go to Waitlist
           </Link>
         </div>
       </div>

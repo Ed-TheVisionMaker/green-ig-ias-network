@@ -36,14 +36,17 @@ export default function Waitlist() {
             {showAnimation && (
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-gray-900 to-transparent"></div>
             )}
-            <div className="border border-pistachio w-max py-8 pl-8 pr-32 rounded-lg">
+            <div
+            // className="border border-pistachio w-max py-8 pl-8 pr-32 rounded-lg"
+            className=" w-max py-8 pl-8 pr-32 bg-white bg-gradient-to-r from-teaGreen/50 to-ginWhite bg-opacity-50 backdrop-blur-xl rounded-2xl drop-shadow-md"
+            >
                 <div>
                 <h2 className="font-bold text-3xl tracking-tight text-ginBlack">
                     Get notified when we're launching.
                 </h2>
                 </div>
                 <form className="mt-8 w-full max-w-md" onSubmit={handleSubmit}>
-                    <div className="flex gap-x-">
+                    <div className="flex gap-x-4">
                         <label htmlFor="email-address" className="sr-only">
                             Email address
                         </label>
@@ -52,7 +55,7 @@ export default function Waitlist() {
                             name="email"
                             autoComplete="email"
                             value={email}
-                            className=" min-w-0 flex-auto rounded-md  border-2 px-3.5 py-2 placeholder:text-ginBlack text-ginBlack shadow-sm ring-1 ring-inset ring-pistachio focus:ring focus:ring-inset focus:ring-darkGreen focus:border-transparent"
+                            className=" min-w-0 flex-auto rounded-md  border-2 px-3.5 py-2 placeholder:text-ginBlack text-ginBlack shadow-sm ring-1 ring-inset ring-ginBlack focus:ring focus:ring-inset focus:ring-darkGreen focus:border-transparent"
                             placeholder="Enter your email here"
                             onChange={(e) => setEmail(e.target.value)}
                         />
