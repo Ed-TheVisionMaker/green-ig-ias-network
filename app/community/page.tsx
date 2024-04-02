@@ -2,18 +2,24 @@ import Waitlist from '@/components/Waitlist.tsx';
 import React, { FC } from 'react';
 
 const Community: FC = () => (
-  <div className='px-32 py-24'>
-    <h2 className='text-6xl font-bold tracking-tight text-ginBlack mt-6 mb-8'>
-      Welcome to Our Community Effort<br/> Against Invasive Green Iguanas!
+  <div className='px-32 py-16'>
+    <h2 className='text-6xl text-center font-bold tracking-tight text-ginBlack mt-6 mb-16'>
+      Welcome to Our Community Effort<br></br> Against Invasive Green Iguanas!
     </h2>
-    <p
-    className='text-2xl mb-8'
-    >
-      Are you concerned about the threat posed by Green Iguanas as an Invasive
-      Alien Species (IAS)? Whether you&apos;re a concerned citizen, a local
-      farmer, a conservationist, or a government official, we invite you to join
-      our collective effort to tackle this challenge!
-    </p>
+        <div className='grid grid-cols-2 gap-10 text-2xl'>
+          <p className='bg-gradient-to-br from-teaGreen/50 to-ginWhite p-8 mb-8 border-2 border-teaGreen rounded-xl'>
+            Welcome to Our Community Effort Against Invasive Green Iguanas! Are
+            you concerned about the threat posed by Green Iguanas as an Invasive
+            Alien Species (IAS)&#63;
+          </p>
+          {/* <p className='bg-gradient-to-l from-teaGreen/50 to-ginWhite'> */}
+          <p className='bg-gradient-to-br from-teaGreen/50 to-ginWhite p-8 mb-8 border-2 border-teaGreen rounded-xl'>
+
+            Whether you're a concerned citizen, a local farmer, a
+            conservationist, or a government official, we invite you to join our
+            collective effort to tackle this challenge!
+          </p>
+        </div>
     <p className='text-2xl mb-8'>
       Our website serves as a hub for sharing information, best practices, and
       resources for reducing or eradicating Green Iguanas in non-native
