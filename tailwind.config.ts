@@ -16,9 +16,9 @@ const config: Config = {
       },
       colors: {
         darkGreen: '#1D3932',
-        mediumGreen: '#9CCD76', //do not use as a text background - low accessibility score
-        lightGreen: '#CBE8BA',
-        ginBlue: '#0f1be3',
+        aquamarine: '#9FFFCB',
+        pistachio: '#9CCD76', // CTA colour
+        teaGreen: '#CBE8BA',
         ginWhite: '#ffffff',
         ginBlack: '#021A04',
       },

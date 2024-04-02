@@ -22,27 +22,30 @@ export default function Waitlist() {
         e.preventDefault();
         registerEmail(email);
         
-        // Show the animation when the form is submitted
         setShowAnimation(true);
         
-        // Hide the animation after a certain duration (you can adjust the timing)
         setTimeout(() => {
             setShowAnimation(false);
-        }, 2000); // 2000 milliseconds (2 seconds) as an example
+        }, 2000);
     };
   
     return (
         <div 
         id='waitlist'
-        className="relative bg-lightGreen p-8 rounded-3xl">
+        className="relative mt-16 ">
             {showAnimation && (
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-gray-900 to-transparent"></div>
             )}
-            <div className="mx-auto max-w-7xl">
-                <h2 className="max-w-2xl text-3xl font-bold tracking-tight sm:pb-6 lg:pb-8 text-ginBlack sm:text-4xl xl:max-w-none xl:flex-auto">
+            <div
+            // className="border border-pistachio w-max py-8 pl-8 pr-32 rounded-lg"
+            className=" w-max py-8 pl-8 pr-32 bg-white bg-gradient-to-r from-teaGreen/50 to-ginWhite bg-opacity-50 backdrop-blur-xl rounded-2xl drop-shadow-md"
+            >
+                <div>
+                <h2 className="font-bold text-3xl tracking-tight text-ginBlack">
                     Get notified when we're launching.
                 </h2>
-                <form className="w-full max-w-md" onSubmit={handleSubmit}>
+                </div>
+                <form className="mt-8 w-full max-w-md" onSubmit={handleSubmit}>
                     <div className="flex gap-x-4">
                         <label htmlFor="email-address" className="sr-only">
                             Email address
@@ -52,20 +55,20 @@ export default function Waitlist() {
                             name="email"
                             autoComplete="email"
                             value={email}
-                            className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-ginBlack shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-ginBlack    sm:text-sm sm:leading-6"
-                            placeholder="Enter your email"
+                            className=" min-w-0 flex-auto rounded-md  border-2 px-3.5 py-2 placeholder:text-ginBlack text-ginBlack shadow-sm ring-1 ring-inset ring-ginBlack focus:ring focus:ring-inset focus:ring-darkGreen focus:border-transparent"
+                            placeholder="Enter your email here"
                             onChange={(e) => setEmail(e.target.value)}
                         />
                         <button
                             type="submit"
-                            className="flex-none rounded-md bg-ginBlue px-3.5 py-2.5 text-sm font-semibold text-ginWhite shadow-sm hover:bg-darkGreen focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                            className="flex-none rounded-md bg-pistachio px-3.5 py-2.5 ml-8 text-sm font-semibold text-ginBlack placeholder:text-ginBlack shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                         >
                             Notify me
                         </button>
                     </div>
-                    <p className="mt-4 text-sm leading-6 text-gray-300">
+                    <p className="mt-4 text-sm leading-6 text-ginBlack">
                         We care about your data. Read our{' '}
-                        <a href="#" className="font-semibold text-white">
+                        <a href="#" className="font-semibold">
                             privacy policy
                         </a>
                         .
