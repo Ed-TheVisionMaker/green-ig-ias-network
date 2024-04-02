@@ -21,7 +21,7 @@ const CommunityHero = () => {
         </div>
       <div className='mt-10 '>
         <a
-          href='/invasive'
+          href='/community'
           className='flex-none rounded-md bg-pistachio px-3.5 py-2.5 text-sm font-semibold text-ginBlack placeholder:text-ginBlack shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white'
         >
           Learn more
