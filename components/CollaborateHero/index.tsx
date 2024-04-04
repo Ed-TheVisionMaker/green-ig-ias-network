@@ -8,20 +8,33 @@ const CollaborateHero = () => {
       </h1>
       <div className='font-open-sans'>
         <h2 className='font-bold text-3xl'>Welcome to Our Collaborative Hub</h2>
-        {/* <p className='text-2xl mt-4'>
-          Our website is your dedicated platform for collaboration, resource
-          sharing, idea generation, mutual support, and connection within the
-          community of individuals and organizations committed to managing IAS.
-        </p> */}
+        <p className='text-2xl mt-4'>
+          Join forces to pool knowledge and resources for effective IAS
+          management.
+        </p>
       </div>
       <div className='font-open-sans'>
         <h2 className='font-bold text-3xl mt-8'>Find Ideas and Solutions</h2>
-        {/* <p className='text-2xl mt-4'>
-          Explore a wealth of ideas, strategies, and best practices for
-          effectively managing IAS populations. From innovative control methods
-          to community-based initiatives, our platform is a treasure trove of
-          inspiration to guide your actions and decisions.
-        </p> */}
+        <p className='text-2xl mt-4'>
+          Explore innovative strategies and best practices to tackle IAS
+          populations.
+        </p>
+      </div>
+      <div>
+        <h2 className='font-bold text-3xl mt-8'>Support Each Other</h2>
+        <p className='text-2xl mt-4'>
+          Connect with a supportive community for advice, encouragement, and
+          practical assistance.
+        </p>
+      </div>
+      <div>
+        <h2 className='font-bold text-3xl mt-8'>
+          Connect with Like-Minded Peers
+        </h2>
+        <p className='text-2xl mt-4'>
+          Forge meaningful connections with others passionate about IAS
+          management and biodiversity conservation.
+        </p>
       </div>
     </div>
   );
