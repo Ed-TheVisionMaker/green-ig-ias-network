@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CollaborateHero = () => {
+const Collaborate = () => {
   return (
     <div>
       <h1 className='mt-2 mb-8 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack'>
@@ -21,4 +21,4 @@ const CollaborateHero = () => {
   );
 };
 
-export default CollaborateHero;
+export default Collaborate;

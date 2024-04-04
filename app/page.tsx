@@ -2,6 +2,7 @@
 import CommunityHero from '@/components/CommunityHero';
 import InvasiveSpeciesHero from '@/components/InvasiveSpeciesHero';
 import Waitlist from '@/components/Waitlist.tsx';
+import CollaborateHero from '@/components/CollaborateHero';
 
 export default function Home() {
   return (
@@ -72,6 +73,7 @@ export default function Home() {
             </div>
             <InvasiveSpeciesHero />
             <CommunityHero />
+            <CollaborateHero />
           </div>
       </div>
     </div>
