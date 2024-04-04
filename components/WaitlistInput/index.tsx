@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, InputHTMLAttributes } from 'react';
 
-const WailistInput = (props: InputHTMLAttributes<HTMLInputElement>) => {
+const WaitlistInput = (props: InputHTMLAttributes<HTMLInputElement>) => {
   const [email, setEmail] = useState('');
 
   return (
@@ -23,4 +23,4 @@ const WailistInput = (props: InputHTMLAttributes<HTMLInputElement>) => {
   );
 };
 
-export default WailistInput;
+export default WaitlistInput;

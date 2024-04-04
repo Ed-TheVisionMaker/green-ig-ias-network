@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import WailistInput from '../WaitlistInput';
+import WaitlistInput from '../WaitlistInput';
 import WaitlistButton from '../WaitlistButton';
 
 const Footer = () => {
@@ -14,7 +14,7 @@ const Footer = () => {
             alt='IAS-GIN Network'
           />
         </div>
-        <WailistInput className=' min-w-0 rounded-md  border-2 px-3.5 py-2 ml-4 placeholder:text-ginBlack text-ginBlack shadow-sm ring-1 ring-inset ring-ginBlack focus:ring focus:ring-inset focus:ring-darkGreen focus:border-transparent' />
+        <WaitlistInput className=' min-w-0 rounded-md  border-2 px-3.5 py-2 ml-4 placeholder:text-ginBlack text-ginBlack shadow-sm ring-1 ring-inset ring-ginBlack focus:ring focus:ring-inset focus:ring-darkGreen focus:border-transparent' />
         <WaitlistButton className='flex-none rounded-md bg-pistachio px-3.5 py-2.5 ml-8 text-sm font-semibold text-ginBlack placeholder:text-ginBlack shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white' />
       </div>
       <div className='h-24 mx-32 border-t border-ginBlack'></div>
