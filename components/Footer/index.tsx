@@ -4,8 +4,8 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <footer className='flex flex-col justify-between font-open-sans w-full h-24 mt-8'>
-      <div>
-        <div className='ml-32 border border-teaGreen rounded-xl w-max'>
+      <div className=''>
+        <div className='ml-32 mb-8 border border-teaGreen rounded-xl w-max'>
           <img
             className='h-14 rounded-xl'
             src='/ias-gin-logo-white.png'
@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='h-24 mx-32 border-t border-ginBlack'></div>
-      <div className='flex items-center justify-between py-8'>
+      <div className='flex items-center justify-between py-8 bg-gradient-to-t from-teaGreen/50 to-ginWhite'>
         <div>
           <b className='text-sm text-ginBlack pl-32'>
             &copy; {new Date().getFullYear()} IAS-GIN Network
