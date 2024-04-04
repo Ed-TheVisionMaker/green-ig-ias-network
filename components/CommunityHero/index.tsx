@@ -2,7 +2,7 @@ import React from 'react';
 
 const CommunityHero = () => {
   return (
-    <div>
+    <div className='mb-24'>
       <div>
         <h1 className='mt-2 mb-8 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack'>
           Community
