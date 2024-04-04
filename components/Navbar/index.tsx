@@ -12,7 +12,7 @@ export default function Navbar() {
         <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
           <div className='flex flex-shrink-0 items-center'>
             <img
-              className='h-14 rounded-xl'
+              className='h-14 rounded-xl border border-teaGreen'
               src='/ias-gin-logo-white.png'
               alt='Your Company'
             />
@@ -52,7 +52,6 @@ export default function Navbar() {
           <p className='text-ginBlack  text-sm font-medium'>Register your interest</p>
           <Link
             href='#waitlist'
-            // className='px-3.5 py-2.5 ml-8 text-sm font-semibold text-ginBla'
             className='px-3.5 py-2.5 ml-8 text-sm font-semibold text-ginBlack  bg-pistachio border-2 border-teaGreen shadow-teaGreen rounded-xl'
           >
             Go to Waitlist
