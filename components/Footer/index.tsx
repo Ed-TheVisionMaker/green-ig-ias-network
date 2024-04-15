@@ -18,7 +18,7 @@ const Footer = () => {
             <WaitlistButton className='flex-none rounded-md bg-pistachio px-3.5 py-2.5 ml-8 text-sm font-semibold text-ginBlack placeholder:text-ginBlack shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white' />
           </div>
         </div>
-        <div className='flex flex-col items-center rounded-xl w-max'>
+        <div className='flex flex-col items-center mr-28 rounded-xl w-max'>
           <img
             className='h-28 rounded-xl border border-teaGreen'
             src='/ias-gin-logo-white.png'
