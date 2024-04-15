@@ -18,12 +18,36 @@ const Footer = () => {
             <p className=''>Share</p>
             <p className=''>Collaborate</p>
           </div>
-        <div className='flex flex-col ml-48 text-sm text-ginBlack font-semibold'>
-            <Link href='/community'>Home</Link>
-            <Link href='/community'>The Invasive Species</Link>
-            <Link href='/community'>Community</Link>
-            <Link href='/community'>Collaborate</Link>
-        </div>
+          <div className='flex ml-48 text-sm text-ginBlack font-semibold'>
+            <div className=' flex flex-col'>
+              <Link
+                className='w-fit border-b border-transparent hover:border-ginBlack mb-2'
+                href='/community'
+              >
+                Home
+              </Link>
+              <Link
+                className='w-fit border-b border-transparent hover:border-ginBlack'
+                href='/community'
+              >
+                The Invasive Species
+              </Link>
+            </div>
+            <div className=' flex flex-col ml-4'>
+              <Link
+                className='w-fit border-b border-transparent hover:border-ginBlack mb-2'
+                href='/community'
+              >
+                Community
+              </Link>
+              <Link
+                className='w-fit border-b border-transparent hover:border-ginBlack'
+                href='/community'
+              >
+                Collaborate
+              </Link>
+            </div>
+          </div>
         </div>
         <div className='flex mr-32'>
           <WaitlistInput className=' min-w-0 rounded-md  border-2 px-3.5 py-2 ml-4 placeholder:text-ginBlack text-ginBlack shadow-sm ring-1 ring-inset ring-ginBlack focus:ring focus:ring-inset focus:ring-darkGreen focus:border-transparent' />
