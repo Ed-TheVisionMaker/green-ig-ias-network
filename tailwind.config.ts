@@ -22,14 +22,14 @@ const config: Config = {
         ginWhite: '#ffffff',
         ginBlack: '#021A04',
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [
-    require('@tailwindcss/forms'), 
-
-  ],
+  plugins: [require('@tailwindcss/forms')],
 };
 export default config;
