@@ -18,14 +18,20 @@ const Footer = () => {
             <p className=''>Share</p>
             <p className=''>Collaborate</p>
           </div>
+        <div className='flex flex-col ml-48 text-sm text-ginBlack font-semibold'>
+            <Link href='/community'>Home</Link>
+            <Link href='/community'>The Invasive Species</Link>
+            <Link href='/community'>Community</Link>
+            <Link href='/community'>Collaborate</Link>
+        </div>
         </div>
         <div className='flex mr-32'>
           <WaitlistInput className=' min-w-0 rounded-md  border-2 px-3.5 py-2 ml-4 placeholder:text-ginBlack text-ginBlack shadow-sm ring-1 ring-inset ring-ginBlack focus:ring focus:ring-inset focus:ring-darkGreen focus:border-transparent' />
           <WaitlistButton className='flex-none rounded-md bg-pistachio px-3.5 py-2.5 ml-8 text-sm font-semibold text-ginBlack placeholder:text-ginBlack shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white' />
         </div>
       </div>
-      <div className='border-t border-ginBlack/50'></div>
-      <div className='flex items-center justify-between py-8 bg-gradient-to-r from-teaGreen/50 to-ginWhite'>
+      <div className='border-t border-dotted border-ginBlack'></div>
+      <div className='flex items-center justify-between py-4 bg-gradient-to-r from-teaGreen/50 to-ginWhite'>
         <div>
           <b className='text-sm text-ginBlack pl-32'>
             &copy; {new Date().getFullYear()} IAS-GIN Network
