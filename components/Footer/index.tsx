@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
         <div className='flex flex-col items-center mr-40 rounded-xl w-max'>
           <img
-            className='h-28 rounded-xl border border-teaGreen'
+            className='h-28 rounded-xl border mt-1 mb-2 border-teaGreen'
             src='/ias-gin-logo-white.png'
             alt='IAS-GIN Network'
           />
@@ -29,7 +29,7 @@ const Footer = () => {
         </div>
           <div className='flex flex-col mr-40 text-md text-ginBlack font-semibold'>
             <h3
-            className='text-xl font-ubuntu font-bold  leading-1 text-ginBlack'>
+            className='text-xl mb-2 font-ubuntu font-bold leading-1 text-ginBlack'>
               Navigate
             </h3>
               <Link
