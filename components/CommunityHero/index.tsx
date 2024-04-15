@@ -30,9 +30,9 @@ const CommunityHero = () => {
             </a>
           </div>
         </div>
-        <div>
+        <div className='flex item-center justify-center rounded-xl bg-gradient-to-b from-teaGreen/50 to-ginWhite mt-8 p-16'>
           <img
-            className='mt-8 rounded-xl shadow-2xl shadow-teaGreen ring-1 ring-gray-900/10'
+            className='w-3/4 opacity-90 p-34 rounded-xl shadow-2xl shadow-ginBlack'
             src='Nino-Souza-Nino-pixabay-group-people.jpg'
             alt='group of people silhouetted at sunset'
           />
