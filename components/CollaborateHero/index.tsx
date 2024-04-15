@@ -22,7 +22,7 @@ const CollaborateHero = () => {
                 </p>
               </div>
               <div className='flex'>
-                <div>
+                <div className='relative'>
                   <div className='font-open-sans'>
                     <h2 className='font-bold text-3xl mt-8'>
                       Find Ideas and Solutions
@@ -48,7 +48,7 @@ const CollaborateHero = () => {
                       IAS management and biodiversity conservation.
                     </p>
                   </div>
-                  <div className='mt-10 '>
+                  <div className='absolute -bottom-8 mt-10 left-1/2'>
                     <a
                       href='/collaborate'
                       className='flex-none rounded-md bg-pistachio px-3.5 py-2.5 text-sm font-semibold text-ginBlack placeholder:text-ginBlack shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white'
