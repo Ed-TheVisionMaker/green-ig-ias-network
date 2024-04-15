@@ -28,35 +28,39 @@ const Footer = () => {
             <p>Connect &minus; Share &minus; Collaborate</p>
           </div>
         </div>
-          <div className='flex mr-40 text-sm text-ginBlack font-semibold'>
-            <div className=' flex flex-col'>
+          <div className='flex flex-col mr-40 text-md text-ginBlack font-semibold'>
+            <h3
+            className='text-xl font-ubuntu font-bold  leading-1 text-ginBlack'>
+              Navigate
+            </h3>
+            {/* <div className=' flex flex-col'> */}
               <Link
-                className='w-fit border-b border-transparent hover:border-ginBlack mb-2'
+                className='w-fit border-b border-transparent font-medium leading-1 hover:border-ginBlack'
                 href='/community'
               >
                 Home
               </Link>
               <Link
-                className='w-fit border-b border-transparent hover:border-ginBlack'
+                className='w-fit border-b border-transparent font-medium leading-1 hover:border-ginBlack'
                 href='/community'
               >
                 The Invasive Species
               </Link>
-            </div>
-            <div className=' flex flex-col ml-4'>
+            {/* </div> */}
+            {/* <div className=' flex flex-col ml-4'> */}
               <Link
-                className='w-fit border-b border-transparent hover:border-ginBlack mb-2'
+                className='w-fit border-b border-transparent font-medium leading-1 hover:border-ginBlack'
                 href='/community'
               >
                 Community
               </Link>
               <Link
-                className='w-fit border-b border-transparent hover:border-ginBlack'
+                className='w-fit border-b border-transparent font-medium leading-1 hover:border-ginBlack'
                 href='/community'
               >
                 Collaborate
               </Link>
-            </div>
+            {/* </div> */}
           </div>
       </div>
       <div className='border-t border-dotted border-ginBlack'></div>
