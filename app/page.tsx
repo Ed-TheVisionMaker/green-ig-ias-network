@@ -7,7 +7,7 @@ import CollaborateHero from '@/components/CollaborateHero';
 export default function Home() {
   return (
     <div className='bg-ginWhite'>
-      <div className='relative isolate pt-24'>
+      <div className='relative isolate pt-20'>
           <div className='flex flex-col items-center'>
             <HeroSection />
             <InvasiveSpeciesHero />
