@@ -58,19 +58,19 @@ const CollaborateHero = () => {
             <div>
               {ShareKnowledge({
                 className:
-                  'h-32 w-32 rounded-full border-2 border-ginBlack bg-teaGreen colour-ginBlack',
+                  'h-32 w-32 rounded-full border-2 border-ginBlack bg-teaGreen colour-ginBlack shadow-md shadow-ginBlack/50',
               })}
             </div>
             <div>
               {IdeaLightbulb({
                 className:
-                  'h-32 w-32 rounded-full border-2 border-ginBlack mt-8 bg-teaGreen colour-ginBlack',
+                  'h-32 w-32 rounded-full border-2 border-ginBlack mt-8 bg-teaGreen colour-ginBlack shadow-md shadow-ginBlack/50',
               })}
             </div>
             <div>
               {Collaborate({
                 className:
-                  'h-32 w-32 rounded-full border-2 border-ginBlack mt-8 bg-teaGreen colour-ginBlack',
+                  'h-32 w-32 rounded-full border-2 border-ginBlack mt-8 bg-teaGreen colour-ginBlack shadow-md shadow-ginBlack/50',
               })}
             </div>
           </div>
