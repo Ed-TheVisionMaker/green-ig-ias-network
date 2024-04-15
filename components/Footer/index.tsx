@@ -7,7 +7,6 @@ const Footer = () => {
   return (
     <footer className='flex flex-col font-open-sans w-full mt-24 shadow-xl shadow-ginBlack'>
       <div className='flex items-center justify-between py-8 bg-gradient-to-r from-teaGreen/50 to-ginWhite'>
-        {/* <div className='flex flex-col ml-40 px-12 py-8 border-2 border-ginWhite rounded-xl'> */}
         <div
         
         className='flex flex-col ml-40'>
@@ -33,7 +32,6 @@ const Footer = () => {
             className='text-xl font-ubuntu font-bold  leading-1 text-ginBlack'>
               Navigate
             </h3>
-            {/* <div className=' flex flex-col'> */}
               <Link
                 className='w-fit border-b border-transparent font-medium leading-1 hover:border-ginBlack'
                 href='/community'
@@ -46,8 +44,6 @@ const Footer = () => {
               >
                 The Invasive Species
               </Link>
-            {/* </div> */}
-            {/* <div className=' flex flex-col ml-4'> */}
               <Link
                 className='w-fit border-b border-transparent font-medium leading-1 hover:border-ginBlack'
                 href='/community'
@@ -60,7 +56,6 @@ const Footer = () => {
               >
                 Collaborate
               </Link>
-            {/* </div> */}
           </div>
       </div>
       <div className='border-t border-dotted border-ginBlack'></div>
