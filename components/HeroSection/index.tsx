@@ -27,7 +27,7 @@ const HeroSection = () => {
             <img
               src='/buddhist-3212973_640.jpg'
               alt=''
-              className='aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg'
+              className='aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg shadow-ginBlack/50'
             />
             <div className='pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10' />
           </div>
@@ -37,14 +37,14 @@ const HeroSection = () => {
             <img
               src='/hike-6487870_640.jpg'
               alt=''
-              className='aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg'
+              className='aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg shadow-ginBlack/50'
             />
           </div>
           <div className='relative'>
             <img
               src='/scott_pixabay_green_ig.jpg'
               alt='/scott_pixabay_green_ig'
-              className='aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg'
+              className='aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg shadow-ginBlack/50'
             />
           </div>
         </div>
@@ -53,14 +53,14 @@ const HeroSection = () => {
             <img
               src='/susan_pixabay_green_ig.jpg'
               alt='/susan_pixabay_green_ig.jpg'
-              className='aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg'
+              className='aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg shadow-ginBlack/50'
             />
           </div>
           <div className='relative'>
             <img
               src='/truen_de_jager_pixabay_green_ig.jpg'
               alt=''
-              className='aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg'
+              className='aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg shadow-ginBlack/50'
             />
           </div>
         </div>

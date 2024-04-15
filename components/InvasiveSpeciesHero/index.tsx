@@ -11,10 +11,10 @@ export default function InvasiveSpeciesHero() {
               The Invasive Species
             </h1>
             <div className='flex relative'>
-              <div className='relative overflow-hidden'>
+              <div className='relative'>
                 <div className=''>
                   <img
-                    className='rounded-xl shadow-2xl shadow-teaGreen ring-1 ring-gray-900/10'
+                    className='rounded-xl shadow-xl shadow-ginBlack/50 ring-1 ring-gray-900/10'
                     src='/green-ig-invasive.jpeg'
                     alt=''
                   />
