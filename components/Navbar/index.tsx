@@ -7,7 +7,7 @@ export default function Navbar() {
 
   return (
     <div className='w-full font-ubuntu bg-gradient-to-r from-teaGreen/50 to-ginWhite'>
-      <div className='relative flex h-16 justify-between px-32'>
+      <div className='relative flex h-16 justify-between mx-auto px-40'>
         <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'></div>
         <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
           <div className='flex flex-shrink-0 items-center'>
