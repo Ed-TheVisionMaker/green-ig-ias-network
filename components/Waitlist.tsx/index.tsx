@@ -55,13 +55,13 @@ export default function Waitlist() {
                             name="email"
                             autoComplete="email"
                             value={email}
-                            className=" min-w-0 flex-auto rounded-md  border-2 px-3.5 py-2 placeholder:text-ginBlack text-ginBlack shadow-sm ring-1 ring-inset ring-ginBlack focus:ring focus:ring-inset focus:ring-darkGreen focus:border-transparent"
+                            className=" min-w-0 flex-auto rounded-md  border-2 px-3.5 py-2 placeholder:text-ginBlack text-ginBlack ring-1 ring-inset ring-ginBlack focus:ring focus:ring-inset focus:ring-darkGreen focus:border-transparent"
                             placeholder="Enter your email here"
                             onChange={(e) => setEmail(e.target.value)}
                         />
                         <button
                             type="submit"
-                            className="flex-none rounded-md bg-pistachio px-3.5 py-2.5 ml-8 text-sm font-semibold text-ginBlack placeholder:text-ginBlack shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                            className="flex-none rounded-md bg-pistachio px-3.5 py-2.5 ml-8 text-sm font-semibold text-ginBlack placeholder:text-ginBlack focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                         >
                             Notify me
                         </button>
