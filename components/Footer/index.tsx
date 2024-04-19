@@ -56,6 +56,12 @@ const Footer = () => {
               >
                 Collaborate
               </Link>
+              <Link
+                className='w-fit border-b border-transparent font-medium leading-1 hover:border-ginBlack'
+                href='/latestInformation'
+              >
+                Latest Information
+              </Link>
           </div>
       </div>
       <div className='border-t border-dotted border-ginBlack'></div>
