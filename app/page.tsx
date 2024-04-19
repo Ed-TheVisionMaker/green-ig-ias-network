@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import CommunityHero from '@/components/CommunityHero';
 import InvasiveSpeciesHero from '@/components/InvasiveSpeciesHero';
 import CollaborateHero from '@/components/CollaborateHero';
+import StayUpToDateHero from '@/components/StayUpToDateHero';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
             <InvasiveSpeciesHero />
             <CommunityHero />
             <CollaborateHero />
+            <StayUpToDateHero />
           </div>
       </div>
     </div>
