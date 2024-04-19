@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from '@/components/Container';
 
-const StayUpToDateHero = () => {
+const LatestInformationHero = () => {
   return (
     <Container>
       <div className='flex'>
@@ -34,4 +34,4 @@ const StayUpToDateHero = () => {
   );
 };
 
-export default StayUpToDateHero;
+export default LatestInformationHero;
