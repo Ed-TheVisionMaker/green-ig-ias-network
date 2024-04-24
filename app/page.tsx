@@ -4,7 +4,7 @@ import CommunityHero from '@/components/CommunityHero';
 import InvasiveSpeciesHero from '@/components/InvasiveSpeciesHero';
 import CollaborateHero from '@/components/CollaborateHero';
 import LatestInformation from '@/components/LatestInformationHero';
-import WorldImpactHero from '@/components/WorldImpactHero';
+import WorldImpactHero from '@/components/GlobalImpactHero';
 
 export default function Home() {
   return (
