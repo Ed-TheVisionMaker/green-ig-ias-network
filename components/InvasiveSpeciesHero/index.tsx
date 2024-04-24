@@ -1,5 +1,5 @@
 import Container from '@/components/Container';
-
+import { IdeaLightbulb, Warning } from '@/utils/svgs';
 export default function InvasiveSpeciesHero() {
   return (
     <Container>
@@ -10,8 +10,8 @@ export default function InvasiveSpeciesHero() {
             <h1 className='mt-2 mb-8 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack'>
               The Invasive Species
             </h1>
-            <div className='flex relative'>
-              <div className='relative'>
+            <div className='relative flex items-start'>
+              <div className='w-fit'>
                 <div className=''>
                   <img
                     className='rounded-xl shadow-xl shadow-ginBlack/50 ring-1 ring-gray-900/10'
@@ -20,32 +20,48 @@ export default function InvasiveSpeciesHero() {
                   />
                 </div>
               </div>
-              <div className='flex flex-col W-1/2 pl-8 text-xl'>
+              <div className='flex flex-col pl-8 text-xl'>
                 <div>
-                  <p>
-                    The Green Iguana (Iguana iguana), known for its vibrant
-                    green coloration and distinctive dewlap, is a reptile native
-                    to Central and South America. It is a species of lizard in
-                    the family Iguanidae, characterized by its long tail, strong
-                    limbs, and sharp claws.
+                  <p className=''>
+                    The Green Iguana (Iguana iguana) is a vibrant reptile native
+                    to Central and South America, known for its striking green
+                    color and unique dewlap.
                   </p>
-                  <p className='mt-8'>
-                    Historically, it has been a popular pet due to its docile
-                    nature, but its introduction into non-native habitats has
-                    led to significant ecological and economic challenges.
+                  <p className='mt-4'>
+                    Introduction to non-native habitats has caused major
+                    ecological and economic issues.
                   </p>
+                  <p className='mt-4'>
+                    It's classified as an Invasive Alien Species (IAS) due to:
+                  </p>
+                  <ul className='ml-12'>
+                    <li className='flex items-center mt-4'>
+                      <span>
+                        {Warning({
+                          className: 'h-10 w-10 mr-4',
+                        })}
+                      </span>
+                      Being introduced as pets
+                    </li>
+                    <li className='flex items-center mt-4'>
+                      <span>
+                        {Warning({
+                          className: 'h-10 w-10 mr-4',
+                        })}
+                      </span>
+                      Escapes and releases{' '}
+                    </li>
+                    <li className='flex items-center mt-4'>
+                      <span>
+                        {Warning({
+                          className: 'h-10 w-10 mr-4',
+                        })}
+                      </span>
+                      Its adaptability to various habitats
+                    </li>
+                  </ul>
                 </div>
-                <div>
-                  <p>
-                    Several factors contribute to the Green Iguana's status as
-                    an Invasive Alien Species (IAS):
-                  </p>
-                  <p className='mt-8'>
-                    Introduction as Pets, Escape and Release and Habitat
-                    Adaptability
-                  </p>
-                </div>
-                <div className='absolute bottom-2 mt-10 '>
+                <div className='absolute right-0 bottom-2 mt-10 '>
                   <a
                     href='/invasive'
                     className='flex-none rounded-md bg-pistachio px-3.5 py-2.5 text-sm font-semibold text-ginBlack placeholder:text-ginBlack shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white'

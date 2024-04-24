@@ -56,6 +56,16 @@ export default function Navbar() {
             >
               collaborate
             </Link>
+            <Link
+              className={`inline-flex items-center  ${
+                pathname === '/latestInformation'
+                  ? 'border-pistachio'
+                  : 'border-transparent'
+              } border-b-2 hover:border-pistachio px-1 pt-1 text-sm font-medium text-ginBlack`}
+              href='/collaborate'
+            >
+              latest information
+            </Link>
           </div>
         </div>
         <div className='flex items-center font-ubuntu'>
