@@ -5,13 +5,13 @@ import { IdeaLightbulb, Collaborate, ShareKnowledge } from '@/utils/svgs';
 const CollaborateHero = () => {
   return (
     <Container>
-      <div className='mb-24'>
+      <div className='relative mb-24'>
         <div className='flex items-center'>
           <div>
             <h1 className='mt-2 mb-8 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack'>
               Collaborate - Share - Connect
             </h1>
-            <div className='border border-2-ginBlack px-8 py-12 rounded-xl'>
+            <div className='border-4 border-dotted border-ginBlack px-8 pb-32 pt-12 rounded-xl'>
               <div className='font-open-sans text-center mb-8'>
                 <h2 className='font-bold text-4xl'>
                   Welcome to Our Collaborative Hub
@@ -22,7 +22,7 @@ const CollaborateHero = () => {
                 </p>
               </div>
               <div className='flex'>
-                <div className='relative'>
+                <div className=''>
                   <div className='font-open-sans'>
                     <h2 className='font-bold text-3xl mt-8'>
                       Find Ideas and Solutions
@@ -48,7 +48,7 @@ const CollaborateHero = () => {
                       IAS management and biodiversity conservation.
                     </p>
                   </div>
-                  <div className='absolute -bottom-8 mt-10 left-1/2'>
+                  <div className='absolute bottom-12 left-1/2'>
                     <a
                       href='/collaborate'
                       className='flex-none rounded-md bg-pistachio px-3.5 py-2.5 text-sm font-semibold text-ginBlack placeholder:text-ginBlack shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white'
