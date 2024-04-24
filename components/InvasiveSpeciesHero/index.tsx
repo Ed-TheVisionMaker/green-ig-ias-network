@@ -1,5 +1,5 @@
 import Container from '@/components/Container';
-
+import { IdeaLightbulb, Warning } from '@/utils/svgs';
 export default function InvasiveSpeciesHero() {
   return (
     <Container>
@@ -33,14 +33,33 @@ export default function InvasiveSpeciesHero() {
                   </p>
                   <p className='mt-8'>
                     It's classified as an Invasive Alien Species (IAS) due to:
-                    <ul className='ml-8'>
-                      <li className='mt-8'>Being introduced as pets</li>
-                      <li className='mt-8'>Escapes and releases </li>
-                      <li className='mt-8'>
-                        Its adaptability to various habitats
-                      </li>
-                    </ul>
                   </p>
+                  <ul className='ml-8'>
+                    <li className='flex items-center mt-8'>
+                      <span>
+                        {Warning({
+                          className: 'h-10 w-10 mr-4',
+                        })}
+                      </span>
+                      Being introduced as pets
+                    </li>
+                    <li className='flex items-center mt-8'>
+                      <span>
+                        {Warning({
+                          className: 'h-10 w-10 mr-4',
+                        })}
+                      </span>
+                      Escapes and releases{' '}
+                    </li>
+                    <li className='flex items-center mt-8'>
+                      <span>
+                        {Warning({
+                          className: 'h-10 w-10 mr-4',
+                        })}
+                      </span>
+                      Its adaptability to various habitats
+                    </li>
+                  </ul>
                 </div>
                 <div className='absolute right-0 bottom-2 mt-10 '>
                   <a

@@ -88,7 +88,7 @@ export function Collaborate(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-export default function IdeaLightbulb(props: SVGProps<SVGSVGElement>) {
+export function IdeaLightbulb(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width='512'
@@ -170,13 +170,15 @@ export function Warning(props: SVGProps<SVGSVGElement>) {
       >
         <path
           d='M11 1032.362l-10 18h20zm0 2l8 15H3z'
-          fill='#ffc35a'
+          // triangle
+          fill='#9CCD76'
           fillOpacity={1}
           transform='translate(0 -1030.362)'
         />
         <path
           d='M10 1046.362h2v2h-2zM10 1045.362h2v-6h-2z'
-          fill='#373737'
+          // exclamation mark
+          fill='#021A04'
           fillOpacity={0.94117647}
           transform='translate(0 -1030.362)'
         />
