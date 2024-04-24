@@ -10,7 +10,7 @@ export default function InvasiveSpeciesHero() {
             <h1 className='mt-2 mb-8 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack'>
               The Invasive Species
             </h1>
-            <div className='flex items-center'>
+            <div className='relative flex items-start'>
               <div className='w-fit'>
                 <div className=''>
                   <img
@@ -20,22 +20,22 @@ export default function InvasiveSpeciesHero() {
                   />
                 </div>
               </div>
-              <div className='relative flex flex-col pl-8 text-xl'>
+              <div className='flex flex-col pl-8 text-xl'>
                 <div>
                   <p className=''>
                     The Green Iguana (Iguana iguana) is a vibrant reptile native
                     to Central and South America, known for its striking green
                     color and unique dewlap.
                   </p>
-                  <p className='mt-8'>
+                  <p className='mt-4'>
                     Introduction to non-native habitats has caused major
                     ecological and economic issues.
                   </p>
-                  <p className='mt-8'>
+                  <p className='mt-4'>
                     It's classified as an Invasive Alien Species (IAS) due to:
                   </p>
-                  <ul className='ml-8'>
-                    <li className='flex items-center mt-8'>
+                  <ul className='ml-12'>
+                    <li className='flex items-center mt-4'>
                       <span>
                         {Warning({
                           className: 'h-10 w-10 mr-4',
@@ -43,7 +43,7 @@ export default function InvasiveSpeciesHero() {
                       </span>
                       Being introduced as pets
                     </li>
-                    <li className='flex items-center mt-8'>
+                    <li className='flex items-center mt-4'>
                       <span>
                         {Warning({
                           className: 'h-10 w-10 mr-4',
@@ -51,7 +51,7 @@ export default function InvasiveSpeciesHero() {
                       </span>
                       Escapes and releases{' '}
                     </li>
-                    <li className='flex items-center mt-8'>
+                    <li className='flex items-center mt-4'>
                       <span>
                         {Warning({
                           className: 'h-10 w-10 mr-4',
