@@ -4,8 +4,8 @@ import Container from '@/components/Container';
 const LatestInformationHero = () => {
   return (
     <Container>
-      <div className='flex'>
-        <div>
+      <div className='flex mb-24'>
+        <div className=''>
           <h1 className='mt-2 mb-8 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack'>
             The Latest Information
           </h1>

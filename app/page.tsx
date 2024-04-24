@@ -4,6 +4,7 @@ import CommunityHero from '@/components/CommunityHero';
 import InvasiveSpeciesHero from '@/components/InvasiveSpeciesHero';
 import CollaborateHero from '@/components/CollaborateHero';
 import LatestInformation from '@/components/LatestInformationHero';
+import WorldImpactHero from '@/components/WorldImpactHero';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
             <CommunityHero />
             <CollaborateHero />
             <LatestInformation/>
+            <WorldImpactHero />
           </div>
       </div>
     </div>
