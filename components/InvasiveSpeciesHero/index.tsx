@@ -22,27 +22,25 @@ export default function InvasiveSpeciesHero() {
               </div>
               <div className='flex flex-col W-1/2 pl-8 text-xl'>
                 <div>
-                  <p>
-                    The Green Iguana (Iguana iguana), known for its vibrant
-                    green coloration and distinctive dewlap, is a reptile native
-                    to Central and South America. It is a species of lizard in
-                    the family Iguanidae, characterized by its long tail, strong
-                    limbs, and sharp claws.
+                  <p className='mt-8'>
+                    The Green Iguana (Iguana iguana) is a vibrant reptile native
+                    to Central and South America, known for its striking green
+                    color and unique dewlap.
                   </p>
                   <p className='mt-8'>
-                    Historically, it has been a popular pet due to its docile
-                    nature, but its introduction into non-native habitats has
-                    led to significant ecological and economic challenges.
+                    Introduction to non-native habitats has caused major
+                    ecological and economic issues. It's classified as an
+                    Invasive
                   </p>
-                </div>
-                <div>
                   <p>
-                    Several factors contribute to the Green Iguana's status as
-                    an Invasive Alien Species (IAS):
-                  </p>
-                  <p className='mt-8'>
-                    Introduction as Pets, Escape and Release and Habitat
-                    Adaptability
+                    Alien Species (IAS) due to:
+                    <ul className='ml-8'>
+                      <li className='mt-8'>Being introduced as pets</li>
+                      <li className='mt-8'>Escapes and releases </li>
+                      <li className='mt-8'>
+                        Its adaptability to various habitats
+                      </li>
+                    </ul>
                   </p>
                 </div>
                 <div className='absolute bottom-2 mt-10 '>
