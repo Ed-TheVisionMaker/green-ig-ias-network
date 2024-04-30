@@ -4,13 +4,13 @@ import dynamic from 'next/dynamic';
 const MapWithNoSSR = dynamic(() => import('./index'), { ssr: false });
 
 
-const WorldImpactHero = () => {
+const GlobalImpactHero = () => {
   return (
     <Container>
       <div className=''>
         <div className=''>
           <h1 className='mt-2 mb-8 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack'>
-            See The Countries Impacted And At-Risk
+            Global Impact
           </h1>
           <div className='text-center bg-teaGreen rounded-xl pt-8'>
             <p className='text-2xl font-open-sans'>
@@ -28,4 +28,4 @@ const WorldImpactHero = () => {
   );
 };
 
-export default WorldImpactHero;
+export default GlobalImpactHero;
