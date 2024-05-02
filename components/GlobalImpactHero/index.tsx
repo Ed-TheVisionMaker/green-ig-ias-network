@@ -1,7 +1,7 @@
 import Container from '@/components/Container';
 import dynamic from 'next/dynamic';
 
-const MapWithNoSSR = dynamic(() => import('./index'), { ssr: false });
+const MapWithNoSSR = dynamic(() => import('../Map/index'), { ssr: false });
 
 
 const GlobalImpactHero = () => {

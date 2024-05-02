@@ -1,4 +1,5 @@
 'use client';
+import 'dotenv/config';
 import HeroSection from '@/components/HeroSection';
 import CommunityHero from '@/components/CommunityHero';
 import InvasiveSpeciesHero from '@/components/InvasiveSpeciesHero';
@@ -15,8 +16,8 @@ export default function Home() {
             <InvasiveSpeciesHero />
             <CommunityHero />
             <CollaborateHero />
-            <LatestInformation/>
             <GlobalImpactHero />
+            <LatestInformation/>
           </div>
       </div>
     </div>
