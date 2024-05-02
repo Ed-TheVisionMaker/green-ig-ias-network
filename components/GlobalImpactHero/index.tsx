@@ -1,5 +1,8 @@
-import React from 'react';
 import Container from '@/components/Container';
+import dynamic from 'next/dynamic';
+
+const MapWithNoSSR = dynamic(() => import('../Map/index'), { ssr: false });
+
 
 const GlobalImpactHero = () => {
   return (
@@ -17,11 +20,7 @@ const GlobalImpactHero = () => {
               Find those countries at-risk and act to prevent an invasive
               incident occuring
             </p>
-            <img
-              className='rounded-b-xl'
-              src='/tropical_regions.jpg'
-              alt='tropical regions world map'
-            />
+            <MapWithNoSSR />
           </div>
         </div>
       </div>
