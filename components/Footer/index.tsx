@@ -55,14 +55,12 @@ const Footer = () => {
           </div>
           <div className='border-t border-dotted border-ginBlack'></div>
           <div className='flex items-center justify-between py-4 bg-gradient-to-r from-teaGreen/50 to-ginWhite'></div>
-          <div className='flex flex-col ml-40'>
-            <h3 className='text-3xl font-ubuntu font-bold tracking-tight text-ginBlack mb-4'>
+          <div className='flex flex-col items-start ml-40'>
+            <h3 className='text-xl font-ubuntu font-bold tracking-tight text-ginBlack mb-2'>
               Join our waitlist
             </h3>
-            <div className='flex'>
-              <WaitlistInput className=' min-w-0 rounded-md  border-2 px-3.5 py-2 placeholder:text-ginBlack text-ginBlack shadow-sm ring-1 ring-inset ring-ginBlack focus:ring focus:ring-inset focus:ring-darkGreen focus:border-transparent' />
-              <WaitlistButton className='flex-none rounded-md bg-pistachio px-3.5 py-2.5 ml-8 text-sm font-semibold text-ginBlack placeholder:text-ginBlack shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white' />
-            </div>
+              <WaitlistInput className=' min-w-0 rounded-md  h-8 border-2 px-3.5 py-2 mb-2 placeholder:text-ginBlack text-ginBlack shadow-sm ring-1 ring-inset ring-ginBlack focus:ring focus:ring-inset focus:ring-darkGreen focus:border-transparent' />
+              <WaitlistButton className='rounded-md bg-pistachio px-3.5 py-2.5 text-sm font-semibold text-ginBlack placeholder:text-ginBlack shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white' />
           </div>
         </div>
       </div>
