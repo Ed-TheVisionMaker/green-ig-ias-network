@@ -5,9 +5,9 @@ import WaitlistButton from '../WaitlistButton';
 
 const Footer = () => {
   return (
-    <footer className='flex flex-col font-open-sans w-full mt-24 shadow-xl shadow-ginBlack'>
+    <footer className='flex flex-col font-open-sans w-full mt-24 bg-ginWhite border-t border-ginBlack/10'>
       <div className='flex'>
-        <div className='flex items-center justify-between py-8 bg-gradient-to-r from-teaGreen/50 to-ginWhite'>
+        <div className='flex items-center justify-between py-8'>
           <div className='flex items-center mr-40 rounded-xl w-max'>
             <img
               className='h-28 mt-1 mb-2'
@@ -54,7 +54,7 @@ const Footer = () => {
             </div>
           </div>
           <div className='border-t border-dotted border-ginBlack'></div>
-          <div className='flex items-center justify-between py-4 bg-gradient-to-r from-teaGreen/50 to-ginWhite'></div>
+          <div className='flex items-center justify-between py-4'></div>
           <div className='flex flex-col items-start ml-40'>
             <h3 className='text-xl font-ubuntu font-bold tracking-tight text-ginBlack mb-2'>
               Join our waitlist

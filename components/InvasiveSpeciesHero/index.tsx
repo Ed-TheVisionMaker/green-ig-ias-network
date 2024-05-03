@@ -38,7 +38,7 @@ export default function InvasiveSpeciesHero() {
                     <li className='flex items-center mt-4'>
                       <span>
                         {Warning({
-                          className: 'h-10 w-10 mr-4',
+                          className: 'h-10 w-10 mr-4 p-4',
                         })}
                       </span>
                       Being introduced as pets
