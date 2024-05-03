@@ -6,8 +6,8 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <div className='w-full font-ubuntu bg-gradient-to-r from-teaGreen/50 to-ginWhite'>
-      <div className='relative flex h-16 justify-between mx-auto px-40'>
+    <div className='w-full font-ubuntu'>
+      <div className='relative flex h-16 justify-between mx-auto px-8'>
         <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'></div>
         <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
           <div className='flex flex-shrink-0 items-center'>
@@ -69,10 +69,9 @@ export default function Navbar() {
           </div>
         </div>
         <div className='flex items-center font-ubuntu'>
-          <p className='text-ginBlack  text-sm font-medium'>Register your interest</p>
           <Link
             href='#waitlist'
-            className='px-3.5 py-2.5 ml-8 text-sm font-semibold text-ginBlack  bg-pistachio border-2 border-teaGreen shadow-teaGreen rounded-xl'
+            className='px-3.5 py-2.5 ml-8 text-sm font-semibold text-ginBlack  bg-aquamarine border-2 border-aquamarine shadow-teaGreen rounded-xl'
           >
             Go to Waitlist
           </Link>
