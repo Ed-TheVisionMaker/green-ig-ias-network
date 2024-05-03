@@ -7,8 +7,8 @@ export default function InvasiveSpeciesHero() {
         <div className='flex'>
           <div className='h-28 bg-gradient-to-r from-teaGreen/50 to-ginWhite rounded-lg'></div>
           <div className=''>
-            <h1 className='mt-2 mb-8 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack'>
-              The Invasive Species
+            <h1 className='w-fit mt-2 mb-8 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack rounded-sm border-b-2 border-transparent hover:border-pistachio'>
+              <a href='/invasive'>The Invasive Species</a>
             </h1>
             <div className='relative flex items-start'>
               <div className='w-fit'>
@@ -61,14 +61,14 @@ export default function InvasiveSpeciesHero() {
                     </li>
                   </ul>
                 </div>
-                <div className='absolute right-0 bottom-2 mt-10 '>
+                {/* <div className='absolute right-0 bottom-2 mt-10 '>
                   <a
                     href='/invasive'
-                    className='flex-none rounded-md bg-aquamarine px-3.5 py-2.5 text-sm font-semibold text-ginBlack placeholder:text-ginBlack shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white'
+                    className='flex-none rounded-md bg-aquamarine px-3.5 py-2.5 text-md font-semibold text-ginBlack placeholder:text-ginBlack shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white'
                   >
                     Learn more
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
