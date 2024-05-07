@@ -19,7 +19,7 @@ const Footer = () => {
             <p>Collaborate</p>
           </div> */}
         </div>
-        <div className='flex flex-col mr-40 text-md text-ginBlack font-semibold'>
+        <div className='flex flex-col ml-40 text-md text-ginBlack font-semibold'>
           <h3 className='text-md mb-2 font-ubuntu font-bold text-ginBlack'>
             Navigate
           </h3>
@@ -66,19 +66,19 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className='flex flex-col items-start'>
-          <h3 className='text-sm font-ubuntu font-bold tracking-tight text-ginBlack mb-2'>
-            Join our waitlist
-          </h3>
+        <div className='flex flex-col items-end'>
+          {/* <h3 className='text-sm font-ubuntu tracking-tight text-ginBlack mb-2'>
+            Register here
+          </h3> */}
           <WaitlistInput className=' min-w-0 rounded-md  h-8 border-2 px-3.5 py-2 mb-2 placeholder:text-ginBlack text-ginBlack shadow-sm ring-1 ring-inset ring-ginBlack focus:ring focus:ring-inset focus:ring-darkGreen focus:border-transparent' />
           <WaitlistButton className='rounded-md bg-aquamarine px-3.5 py-2.5 text-sm font-semibold text-ginBlack placeholder:text-ginBlack shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white' />
         </div>
       </div>
-      <div className='flex border border-orange-500'>
-        <div>
+      <div className='flex justify-between'>
+        <div className='ml-6'>
           <strong>Contact:</strong> info@ias-gin.com
         </div>
-        <div className='text-sm font-bold text-ginBlack'>
+        <div className='text-sm font-bold text-ginBlack mr-90'>
           <Link href='/privacy-policy'>Privacy Policy</Link>
         </div>
         <div>
