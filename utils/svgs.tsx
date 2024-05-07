@@ -139,50 +139,19 @@ export function IdeaLightbulb(props: SVGProps<SVGSVGElement>) {
 export function Warning(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width='800px'
-      height='800px'
-      viewBox='0 0 22 22'
       xmlns='http://www.w3.org/2000/svg'
-      xmlnsXlink='http://www.w3.org/1999/xlink'
+      fill='none'
+      viewBox='0 0 24 24'
+      strokeWidth={1.5}
+      stroke='currentColor'
+      className='w-6 h-6'
       {...props}
     >
-      <defs>
-        <linearGradient
-          gradientUnits='userSpaceOnUse'
-          y2={2}
-          x2={16}
-          y1={29.999973}
-          x1={16}
-          xlinkHref='#a'
-          gradientTransform='matrix(1.66667 0 0 -1.66667 -15.667 1064.696)'
-        />
-        <linearGradient id='a'>
-          <stop offset={0} stopColor='#fcd994' stopOpacity={1} />
-          <stop offset={1} stopColor='#fff6e1' stopOpacity={1} />
-        </linearGradient>
-      </defs>
-      <g
-        stroke='none'
-        strokeWidth='1px'
-        strokeLinecap='butt'
-        strokeLinejoin='miter'
-        strokeOpacity={1}
-      >
-        <path
-          d='M11 1032.362l-10 18h20zm0 2l8 15H3z'
-          // triangle
-          fill='#9CCD76'
-          fillOpacity={1}
-          transform='translate(0 -1030.362)'
-        />
-        <path
-          d='M10 1046.362h2v2h-2zM10 1045.362h2v-6h-2z'
-          // exclamation mark
-          fill='#021A04'
-          fillOpacity={0.94117647}
-          transform='translate(0 -1030.362)'
-        />
-      </g>
+      <path
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        d='M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z'
+      />
     </svg>
   );
 }

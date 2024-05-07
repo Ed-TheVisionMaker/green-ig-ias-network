@@ -37,8 +37,8 @@ export default function InvasiveSpeciesHero() {
                   <ul className='ml-12'>
                     <li className='flex items-center mt-4'>
                       <span>
-                        {Warning({
-                          className: 'h-10 w-10 mr-4 p-4',
+                      {Warning({
+                          className: 'h-10 w-10 mr-4',
                         })}
                       </span>
                       Being introduced as pets
@@ -61,14 +61,6 @@ export default function InvasiveSpeciesHero() {
                     </li>
                   </ul>
                 </div>
-                {/* <div className='absolute right-0 bottom-2 mt-10 '>
-                  <a
-                    href='/invasive'
-                    className='flex-none rounded-md bg-aquamarine px-3.5 py-2.5 text-md font-semibold text-ginBlack placeholder:text-ginBlack shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white'
-                  >
-                    Learn more
-                  </a>
-                </div> */}
               </div>
             </div>
           </div>

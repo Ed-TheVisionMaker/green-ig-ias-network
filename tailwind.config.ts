@@ -16,8 +16,8 @@ const config: Config = {
       },
       colors: {
         darkGreen: '#1D3932',
-        aquamarine: '#9FFFCB',
-        pistachio: '#9CCD76', // CTA colour
+        aquamarine: '#9FFFCB', // CTA colour
+        pistachio: '#9CCD76',
         teaGreen: '#CBE8BA',
         ginWhite: '#ffffff',
         ginBlack: '#021A04',
