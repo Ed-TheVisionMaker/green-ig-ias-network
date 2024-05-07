@@ -1,7 +1,7 @@
 import { IdeaLightbulb, Warning } from '@/utils/svgs';
 export default function InvasiveSpeciesHero() {
   return (
-      <div className='bg-ginWhite rounded-xl my-24'>
+      <div className='bg-ginWhite rounded-xl mt-32'>
         <div className='flex'>
           <div className='h-28 bg-gradient-to-r from-teaGreen/50 to-ginWhite rounded-lg'></div>
           <div className=''>

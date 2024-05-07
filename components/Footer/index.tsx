@@ -5,7 +5,7 @@ import WaitlistButton from '../WaitlistButton';
 
 const Footer = () => {
   return (
-    <footer className='flex flex-col font-open-sans w-full mt-24 px-24 mb-4 bg-ginWhite border-t border-ginBlack/10'>
+    <footer className='flex flex-col font-open-sans w-full mt-32 px-24 mb-4 bg-ginWhite border-t border-ginBlack/10'>
       <div className='flex w-full items-center justify-between py-8'>
         <div className='flex items-center'>
           <img

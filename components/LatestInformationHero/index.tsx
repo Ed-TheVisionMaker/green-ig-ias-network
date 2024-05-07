@@ -2,7 +2,7 @@ import React from 'react';
 
 const LatestInformationHero = () => {
   return (
-      <div className='flex mb-24'>
+      <div className='flex mt-32'>
         <div className=''>
           <h1 className='mt-2 mb-8 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack'>
             The Latest Information

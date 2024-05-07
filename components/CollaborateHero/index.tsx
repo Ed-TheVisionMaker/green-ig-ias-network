@@ -3,10 +3,10 @@ import { IdeaLightbulb, Collaborate, ShareKnowledge } from '@/utils/svgs';
 
 const CollaborateHero = () => {
   return (
-      <div className='mb-24'>
+      <div className='mt-32'>
         <div className='flex items-center'>
           <div>
-            <h1 className='mt-2 mb-8 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack'>
+            <h1 className='mb-8 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack'>
               Collaborate - Share - Connect
             </h1>
             <div className='border border-ginBlack px-16 py-12 rounded-xl'>

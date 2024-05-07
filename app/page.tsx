@@ -11,7 +11,7 @@ import Container from '@/components/Container';
 export default function Home() {
   return (
     <div className='bg-ginWhite'>
-      <div className='relative pt-20'>
+      <div className='relative pt-24'>
         <Container>
           <div className='flex flex-col items-center'>
             <HeroSection />

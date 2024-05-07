@@ -3,7 +3,7 @@ import Waitlist from '@/components/Waitlist.tsx';
 
 const HeroSection = () => {
   return (
-    <div className='w-full max-w-2xl lg:mx-0 lg:flex lg:max-w-none '>
+    <div className='w-full max-w-2xl lg:mx-0 lg:flex lg:max-w-none'>
       <div className='relative flex flex-col w-full'>
         <div className=''>
           <h1 className='text-4xl font-bold tracking-tight text-ginBlack sm:text-6xl mt-6'>

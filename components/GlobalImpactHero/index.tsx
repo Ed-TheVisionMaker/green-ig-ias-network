@@ -5,9 +5,8 @@ const MapWithNoSSR = dynamic(() => import('../Map/index'), { ssr: false });
 
 const GlobalImpactHero = () => {
   return (
-      <div className=''>
-        <div className=''>
-          <h1 className='mt-2 mb-8 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack'>
+      <div className='w-full mt-32'>
+          <h1 className='mb-8 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack'>
             Global Impact
           </h1>
           <div className='text-center bg-teaGreen rounded-xl pt-8'>
@@ -20,7 +19,6 @@ const GlobalImpactHero = () => {
             </p>
             <MapWithNoSSR />
           </div>
-        </div>
       </div>
   );
 };
