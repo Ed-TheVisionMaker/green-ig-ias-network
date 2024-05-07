@@ -1,4 +1,3 @@
-import Container from '@/components/Container';
 import dynamic from 'next/dynamic';
 
 const MapWithNoSSR = dynamic(() => import('../Map/index'), { ssr: false });
@@ -6,7 +5,6 @@ const MapWithNoSSR = dynamic(() => import('../Map/index'), { ssr: false });
 
 const GlobalImpactHero = () => {
   return (
-    <Container>
       <div className=''>
         <div className=''>
           <h1 className='mt-2 mb-8 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack'>
@@ -24,7 +22,6 @@ const GlobalImpactHero = () => {
           </div>
         </div>
       </div>
-    </Container>
   );
 };
 

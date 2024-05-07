@@ -1,9 +1,7 @@
 import React from 'react';
-import Container from '@/components/Container';
 
 const LatestInformationHero = () => {
   return (
-    <Container>
       <div className='flex mb-24'>
         <div className=''>
           <h1 className='mt-2 mb-8 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack'>
@@ -30,7 +28,6 @@ const LatestInformationHero = () => {
           </div>
         </div>
       </div>
-    </Container>
   );
 };
 

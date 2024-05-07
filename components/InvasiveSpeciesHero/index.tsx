@@ -1,8 +1,6 @@
-import Container from '@/components/Container';
 import { IdeaLightbulb, Warning } from '@/utils/svgs';
 export default function InvasiveSpeciesHero() {
   return (
-    <Container>
       <div className='bg-ginWhite rounded-xl my-24'>
         <div className='flex'>
           <div className='h-28 bg-gradient-to-r from-teaGreen/50 to-ginWhite rounded-lg'></div>
@@ -66,6 +64,5 @@ export default function InvasiveSpeciesHero() {
           </div>
         </div>
       </div>
-    </Container>
   );
 }

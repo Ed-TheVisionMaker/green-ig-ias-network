@@ -1,10 +1,8 @@
 import React from 'react';
-import Container from '@/components/Container';
 import { IdeaLightbulb, Collaborate, ShareKnowledge } from '@/utils/svgs';
 
 const CollaborateHero = () => {
   return (
-    <Container>
       <div className='mb-24'>
         <div className='flex items-center'>
           <div>
@@ -82,7 +80,6 @@ const CollaborateHero = () => {
           </div>
         </div>
       </div>
-    </Container>
   );
 };
 
