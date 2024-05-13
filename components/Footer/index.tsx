@@ -5,7 +5,7 @@ import WaitlistButton from '../WaitlistButton';
 
 const Footer = () => {
   return (
-    <footer className='flex flex-col font-open-sans w-full mt-32 px-24 mb-4 bg-ginWhite border-t border-ginBlack/10'>
+    <footer className='flex flex-col font-open-sans w-full mt-32 mb-4 px-12 bg-ginWhite border-t border-ginBlack/10'>
       <div className='flex w-full items-center justify-between py-8'>
         <div className='flex items-center'>
           <img
@@ -13,8 +13,7 @@ const Footer = () => {
             src='/ias-gin-logo-black.png'
             alt='IAS-GIN Network'
           />
-        </div>
-        <div className='flex flex-col ml-40 text-md text-ginBlack font-semibold'>
+        <div className='flex flex-col ml-28 text-md text-ginBlack font-semibold'>
           <h3 className='text-md mb-2 font-ubuntu font-bold text-ginBlack'>
             Navigate
           </h3>
@@ -60,6 +59,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
+        </div>
         </div>
         <div className='h-full flex flex-col justify-between items-end'>
           <WaitlistInput className=' min-w-0 rounded-md h-8 border-2 px-3.5 py-2 mb-4 placeholder:text-ginBlack text-ginBlack shadow-sm ring-1 ring-inset ring-ginBlack focus:ring focus:ring-inset focus:ring-darkGreen focus:border-transparent' />

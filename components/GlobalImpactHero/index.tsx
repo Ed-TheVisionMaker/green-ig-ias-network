@@ -1,8 +1,3 @@
-import dynamic from 'next/dynamic';
-
-const MapWithNoSSR = dynamic(() => import('../Map/index'), { ssr: false });
-
-
 const GlobalImpactHero = () => {
   return (
       <div className='w-full mt-32'>
@@ -17,7 +12,6 @@ const GlobalImpactHero = () => {
               Find those countries at-risk and act to prevent an invasive
               incident occuring
             </p>
-            <MapWithNoSSR />
           </div>
       </div>
   );
