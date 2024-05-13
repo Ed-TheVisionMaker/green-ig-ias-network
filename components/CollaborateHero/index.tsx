@@ -1,14 +1,12 @@
 import React from 'react';
-import Container from '@/components/Container';
 import { IdeaLightbulb, Collaborate, ShareKnowledge } from '@/utils/svgs';
 
 const CollaborateHero = () => {
   return (
-    <Container>
-      <div className='mb-24'>
+      <div className='mt-32'>
         <div className='flex items-center'>
           <div>
-            <h1 className='mt-2 mb-8 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack'>
+            <h1 className='mb-8 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack'>
               Collaborate - Share - Connect
             </h1>
             <div className='border border-ginBlack px-16 py-12 rounded-xl'>
@@ -73,7 +71,7 @@ const CollaborateHero = () => {
             <div className='flex justify-center w-full mt-24'>
               <a
                 href='/collaborate'
-                className='rounded-md bg-pistachio mx-auto px-3.5 py-2.5 text-sm font-semibold text-ginBlack placeholder:text-ginBlack shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white'
+                className='rounded-md bg-aquamarine mx-auto px-3.5 py-2.5 text-md font-semibold text-ginBlack placeholder:text-ginBlack shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white'
               >
                 Learn more
               </a>
@@ -82,7 +80,6 @@ const CollaborateHero = () => {
           </div>
         </div>
       </div>
-    </Container>
   );
 };
 

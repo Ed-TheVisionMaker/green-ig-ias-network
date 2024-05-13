@@ -1,14 +1,12 @@
-import Container from '@/components/Container';
 import { IdeaLightbulb, Warning } from '@/utils/svgs';
 export default function InvasiveSpeciesHero() {
   return (
-    <Container>
-      <div className='bg-ginWhite rounded-xl my-24'>
+      <div className='bg-ginWhite rounded-xl mt-32'>
         <div className='flex'>
           <div className='h-28 bg-gradient-to-r from-teaGreen/50 to-ginWhite rounded-lg'></div>
           <div className=''>
-            <h1 className='mt-2 mb-8 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack'>
-              The Invasive Species
+            <h1 className='w-fit mt-2 mb-8 text-5xl font-ubuntu font-bold tracking-tight text-ginBlack rounded-sm border-b-2 border-transparent hover:border-pistachio'>
+              <a href='/invasive'>The Invasive Species</a>
             </h1>
             <div className='relative flex items-start'>
               <div className='w-fit'>
@@ -37,7 +35,7 @@ export default function InvasiveSpeciesHero() {
                   <ul className='ml-12'>
                     <li className='flex items-center mt-4'>
                       <span>
-                        {Warning({
+                      {Warning({
                           className: 'h-10 w-10 mr-4',
                         })}
                       </span>
@@ -61,19 +59,10 @@ export default function InvasiveSpeciesHero() {
                     </li>
                   </ul>
                 </div>
-                <div className='absolute right-0 bottom-2 mt-10 '>
-                  <a
-                    href='/invasive'
-                    className='flex-none rounded-md bg-pistachio px-3.5 py-2.5 text-sm font-semibold text-ginBlack placeholder:text-ginBlack shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white'
-                  >
-                    Learn more
-                  </a>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </Container>
   );
 }

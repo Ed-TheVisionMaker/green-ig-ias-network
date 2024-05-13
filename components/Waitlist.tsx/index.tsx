@@ -38,7 +38,7 @@ export default function Waitlist() {
             )}
             <div
             // className="border border-pistachio w-max py-8 pl-8 pr-32 rounded-lg"
-            className=" w-max py-8 pl-8 pr-32 bg-white bg-gradient-to-r from-teaGreen/50 to-ginWhite bg-opacity-50 backdrop-blur-xl rounded-2xl drop-shadow-md"
+            className=" w-max mt-12 py-8 pl-8 pr-32 bg-white border-pistachio/50 border backdrop-blur-xl rounded-2xl drop-shadow-md"
             >
                 <div>
                 <h2 className="font-bold text-3xl tracking-tight text-ginBlack">
@@ -61,7 +61,7 @@ export default function Waitlist() {
                         />
                         <button
                             type="submit"
-                            className="flex-none rounded-md bg-pistachio px-3.5 py-2.5 ml-8 text-sm font-semibold text-ginBlack placeholder:text-ginBlack focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                            className="flex-none rounded-md bg-aquamarine px-3.5 py-2.5 ml-8 text-sm font-semibold text-ginBlack placeholder:text-ginBlack focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                         >
                             Notify me
                         </button>
