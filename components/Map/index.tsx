@@ -16,6 +16,26 @@ const MapContainer = () => {
       lat: 18.220833,
       lng: -66.590149,
     },
+    {
+      country: `Hawai'i`,
+      lat: 19.5938015,
+      lng: -155.4283701,
+    },
+    {
+      country: 'Fiji',
+      lat: -18.1239696,
+      lng: 179.0122737,
+    },
+    {
+      country: 'Ishigaki Island(Japan)',
+      lat: 24.3618503,
+      lng: 124.1543424,
+    },
+    {
+      country: 'Puerto Rico',
+      lat: 18.220833,
+      lng: -66.590149,
+    },
   ];
 
   return (
