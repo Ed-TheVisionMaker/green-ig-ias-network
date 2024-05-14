@@ -1,3 +1,5 @@
+import MapContainer from '../Map';
+
 const GlobalImpactHero = () => {
   return (
       <div className='w-full mt-32'>
@@ -13,6 +15,7 @@ const GlobalImpactHero = () => {
               incident occuring
             </p>
           </div>
+          <MapContainer />
       </div>
   );
 };
