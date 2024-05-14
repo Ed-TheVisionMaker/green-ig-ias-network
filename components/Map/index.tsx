@@ -37,15 +37,14 @@ const MapContainer = () => {
       lng: -66.590149,
     },
   ];
-
   return (
     <div>
       <Map
         mapboxAccessToken={accessToken}
         initialViewState={{
-          longitude: -122.4,
-          latitude: 37.8,
-          zoom: 3,
+          latitude: -1.189,
+          longitude: -123.01,
+          zoom: 1,
         }}
         style={{ width: '100%', height: 400 }}
         mapStyle='mapbox://styles/mapbox/streets-v9'
@@ -53,8 +52,8 @@ const MapContainer = () => {
         {marker.map((location) => (
           <Marker
             key={location.country}
-            longitude={location.lng}
             latitude={location.lat}
+            longitude={location.lng}
           />
         ))}
       </Map>
