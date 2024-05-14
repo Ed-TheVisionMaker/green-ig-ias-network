@@ -1,4 +1,4 @@
-import MapContainer from '../Map';
+import MapContainer from '../MapContainer';
 
 const GlobalImpactHero = () => {
   return (
