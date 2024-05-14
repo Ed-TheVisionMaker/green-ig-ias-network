@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect, Dispatch } from 'react';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import Map, { Marker, NavigationControl } from 'react-map-gl';
 
+const Button = ({
+  showGlobe,
+  setShowGlobe,
+}: {
+  showGlobe: boolean;
+  setShowGlobe: Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  return (
+    <div className='absolute -top-14 right-2'>
+      <button
+        className='w-28 px-3.5 py-2.5 ml-8 text-sm font-semibold text-ginWhite border border-ginBlack bg-ginBlack rounded-xl'
+        onClick={() => setShowGlobe((prevState) => !prevState)}
+      >
+        {showGlobe ? 'Show Map' : 'Show Globe'}
+      </button>
+    </div>
+  );
+};
+
 const MapContainer = () => {
+  const [showGlobe, setShowGlobe] = useState(false);
+  const [zoom, setZoom] = useState(1);
+
   const accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
   const marker = [
@@ -31,24 +53,32 @@ const MapContainer = () => {
       lat: 24.3618503,
       lng: 124.1543424,
     },
-    {
-      country: 'Puerto Rico',
-      lat: 18.220833,
-      lng: -66.590149,
-    },
   ];
+
+  useEffect(() => {
+    if (showGlobe === true) {
+      setZoom(2);
+    } else if (showGlobe === false) {
+      setZoom(1);
+    }
+  }, [showGlobe]);
+
   return (
-    <div className=''>
+    <div className='relative'>
       <Map
+        key={showGlobe ? 'outdoor' : 'street'}
         mapboxAccessToken={accessToken}
         initialViewState={{
           latitude: -1.189,
           longitude: -123.01,
-          zoom: 1,
+          zoom: zoom,
         }}
         style={{ width: '100%', height: 400, borderRadius: '0 0.5rem' }}
-        mapStyle='mapbox://styles/mapbox/streets-v9'
-        // mapStyle='mapbox://styles/mapbox/outdoors-v12'
+        mapStyle={
+          showGlobe
+            ? 'mapbox://styles/mapbox/outdoors-v12'
+            : 'mapbox://styles/mapbox/streets-v9'
+        }
       >
         {marker.map((location) => (
           <Marker
@@ -59,6 +89,7 @@ const MapContainer = () => {
         ))}
         <NavigationControl position='top-right' />
       </Map>
+      <Button showGlobe={showGlobe} setShowGlobe={setShowGlobe} />
     </div>
   );
 };
