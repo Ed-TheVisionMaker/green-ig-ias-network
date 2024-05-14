@@ -38,15 +38,15 @@ const MapContainer = () => {
     },
   ];
   return (
-    <div>
+    <div className=''>
       <Map
         mapboxAccessToken={accessToken}
         initialViewState={{
           latitude: -1.189,
           longitude: -123.01,
-          zoom: 3,
+          zoom: 1,
         }}
-        style={{ width: '100%', height: 400 }}
+        style={{ width: '100%', height: 400, borderRadius: '0 0.5rem' }}
         mapStyle='mapbox://styles/mapbox/streets-v9'
         // mapStyle='mapbox://styles/mapbox/outdoors-v12'
       >
