@@ -1,6 +1,6 @@
 import React from 'react';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import Map, { Marker } from 'react-map-gl';
+import Map, { Marker, NavigationControl } from 'react-map-gl';
 
 const MapContainer = () => {
   const accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
@@ -44,10 +44,11 @@ const MapContainer = () => {
         initialViewState={{
           latitude: -1.189,
           longitude: -123.01,
-          zoom: 1,
+          zoom: 3,
         }}
         style={{ width: '100%', height: 400 }}
         mapStyle='mapbox://styles/mapbox/streets-v9'
+        // mapStyle='mapbox://styles/mapbox/outdoors-v12'
       >
         {marker.map((location) => (
           <Marker
@@ -56,6 +57,7 @@ const MapContainer = () => {
             longitude={location.lng}
           />
         ))}
+        <NavigationControl position='top-right' />
       </Map>
     </div>
   );
