@@ -8,8 +8,8 @@ const images1 = [
 ];
 
 const images2 = [
-  'Nino-Souza-Nino-pixabay-group-people.jpg',
   'truen_de_jager_pixabay_green_ig.jpg',
+  'Nino-Souza-Nino-pixabay-group-people.jpg',
   'susan_pixabay_green_ig.jpg',
 ];
 
@@ -28,40 +28,35 @@ const inDevelopment = () => {
     };
 
     const timer = setInterval(() => {
-      // fadeOut();
+      fadeOut();
       setTimeout(() => {
         setCurrentIndexLeft((prevIndex) => (prevIndex + 1) % images1.length);
         setCurrentIndexRight((prevIndex) => (prevIndex + 1) % images2.length);
-        // fadeIn();
+        fadeIn();
       }, 500); // Time for fade-out
-    }, 2000); // Total time for each image
+    }, 3000); // Total time for each image
 
     return () => {
       clearInterval(timer);
     };
-
-    //     const intervalIdRight = setInterval(() => {
-    //       setCurrentIndexRight((prevIndex) => (prevIndex + 1) % images1.length);
-    //     }, 2000);
-
-    //     return () => {
-    //       clearInterval(intervalIdLeft);
-    //       clearInterval(intervalIdRight);
-    //     };
   }, []);
 
   return (
-    <div className='relative h-screen flex items-center justify-center text-unbuntu'>
-      <div className='absolute flex justify-center left-48 top-56 h-48 w-96 border border-ginBlack'>
+    <div className='h-screen flex items-center justify-center text-unbuntu'>
+      <div className='relative flex items-center justify-center h-48 w-96 border border-ginBlack'>
         {images1.map((image, index) => (
-          <img
+          <div
             key={index}
-            src={image}
-            alt={`Slide ${index}`}
-            className={`inset-0 h-full object-cover transition-opacity duration-500 ${
+            className={`h-full absolute transition-opacity duration-500 ${
               index === currentIndexLeft ? fadeClass : 'opacity-0'
             }`}
-          />
+          >
+            <img
+              src={image}
+              alt={`Slide ${index}`}
+              className='h-full object-cover'
+            />
+          </div>
         ))}
       </div>
       <div className='flex flex-col items-center justify-center text-unbuntu'>
@@ -71,16 +66,20 @@ const inDevelopment = () => {
           We look forward to bringing you insights and updates soon
         </p>
       </div>
-      <div className='absolute flex justify-center right-48 top-56 h-48 w-96 border border-ginBlack'>
+      <div className='relative flex items-center justify-center h-48 w-96 border border-ginBlack'>
         {images2.map((image, index) => (
-          <img
+          <div
             key={index}
-            src={image}
-            alt={`Slide ${index}`}
-            className={`inset-0 h-full object-cover transition-opacity duration-500 ${
+            className={`h-full absolute transition-opacity duration-500 ${
               index === currentIndexRight ? fadeClass : 'opacity-0'
             }`}
-          />
+          >
+            <img
+              src={image}
+              alt={`Slide ${index}`}
+              className='h-full object-cover'
+            />
+          </div>
         ))}
       </div>
     </div>
