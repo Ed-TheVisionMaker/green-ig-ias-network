@@ -8,15 +8,15 @@ const images1 = [
 ];
 
 const images2 = [
-  'truen_de_jager_pixabay_green_ig.jpg',
-  'Nino-Souza-Nino-pixabay-group-people.jpg',
   'susan_pixabay_green_ig.jpg',
+  'Nino-Souza-Nino-pixabay-group-people.jpg',
+  'truen_de_jager_pixabay_green_ig.jpg',
 ];
 
 const inDevelopment = () => {
   const [currentIndexLeft, setCurrentIndexLeft] = useState(0);
   const [currentIndexRight, setCurrentIndexRight] = useState(0);
-  const [fadeClass, setFadeClass] = useState('opacity-0');
+  const [fadeClass, setFadeClass] = useState('opacity-100');
 
   useEffect(() => {
     const fadeIn = () => {
@@ -43,7 +43,7 @@ const inDevelopment = () => {
 
   return (
     <div className='h-screen flex items-center justify-center text-unbuntu'>
-      <div className='relative flex items-center justify-center h-48 w-96 border border-ginBlack'>
+      <div className='relative flex items-center justify-center h-56 w-80'>
         {images1.map((image, index) => (
           <div
             key={index}
@@ -54,7 +54,7 @@ const inDevelopment = () => {
             <img
               src={image}
               alt={`Slide ${index}`}
-              className='h-full object-cover'
+              className='h-full rounded-xl object-cover'
             />
           </div>
         ))}
@@ -66,7 +66,7 @@ const inDevelopment = () => {
           We look forward to bringing you insights and updates soon
         </p>
       </div>
-      <div className='relative flex items-center justify-center h-48 w-96 border border-ginBlack'>
+      <div className='relative flex items-center justify-center  h-56 w-80'>
         {images2.map((image, index) => (
           <div
             key={index}
@@ -77,7 +77,7 @@ const inDevelopment = () => {
             <img
               src={image}
               alt={`Slide ${index}`}
-              className='h-full object-cover'
+              className='h-full rounded-xl object-cover'
             />
           </div>
         ))}
