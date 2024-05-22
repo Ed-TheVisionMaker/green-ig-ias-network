@@ -59,11 +59,11 @@ const inDevelopment = () => {
           </div>
         ))}
       </div>
-      <div className='flex flex-col items-center justify-center text-unbuntu'>
+      <div className='flex flex-col items-center justify-center text-unbuntu mx-12'>
         <img className='h-64' src='/ias-gin-logo-black.png' />
         <h2 className='text-3xl mb-4'>This page is in development</h2>
         <p className='text-xl'>
-          We look forward to bringing you insights and updates soon
+          We look forward to bringing you insights and updates soon&#33;
         </p>
       </div>
       <div className='relative flex items-center justify-center  h-56 w-80'>
