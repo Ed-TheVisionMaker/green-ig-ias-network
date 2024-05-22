@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const images1 = [
   '/buddhist-3212973_640.jpg',
@@ -28,14 +28,17 @@ const inDevelopment = () => {
     };
 
     const timer = setInterval(() => {
-      fadeOut();
+      // fadeOut();
       setTimeout(() => {
         setCurrentIndexLeft((prevIndex) => (prevIndex + 1) % images1.length);
-        fadeIn();
+        setCurrentIndexRight((prevIndex) => (prevIndex + 1) % images2.length);
+        // fadeIn();
       }, 500); // Time for fade-out
     }, 2000); // Total time for each image
 
-    return () => clearInterval(timer);
+    return () => {
+      clearInterval(timer);
+    };
 
     //     const intervalIdRight = setInterval(() => {
     //       setCurrentIndexRight((prevIndex) => (prevIndex + 1) % images1.length);
@@ -55,7 +58,7 @@ const inDevelopment = () => {
             key={index}
             src={image}
             alt={`Slide ${index}`}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+            className={`inset-0 h-full object-cover transition-opacity duration-500 ${
               index === currentIndexLeft ? fadeClass : 'opacity-0'
             }`}
           />
@@ -68,11 +71,17 @@ const inDevelopment = () => {
           We look forward to bringing you insights and updates soon
         </p>
       </div>
-      <div className='h-fit'>
-        <img
-          className='absolute right-48 top-24 h-48 rounded-xl'
-          src={images2[currentIndexRight]}
-        />
+      <div className='absolute flex justify-center right-48 top-56 h-48 w-96 border border-ginBlack'>
+        {images2.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt={`Slide ${index}`}
+            className={`inset-0 h-full object-cover transition-opacity duration-500 ${
+              index === currentIndexRight ? fadeClass : 'opacity-0'
+            }`}
+          />
+        ))}
       </div>
     </div>
   );
