@@ -21,19 +21,19 @@ const Footer = () => {
             <div className='flex flex-col'>
               <Link
                 className='w-fit border-b border-transparent font-medium hover:border-ginBlack'
-                href='/community'
+                href='/inDevelopment'
               >
                 Home
               </Link>
               <Link
                 className='w-fit border-b border-transparent font-medium  hover:border-ginBlack'
-                href='/community'
+                href='/inDevelopment'
               >
                 Community
               </Link>
               <Link
                 className='w-fit border-b border-transparent font-medium hover:border-ginBlack'
-                href='/community'
+                href='/inDevelopment'
               >
                 The Invasive Species
               </Link>
@@ -41,19 +41,19 @@ const Footer = () => {
             <div className='flex flex-col ml-4'>
               <Link
                 className='w-fit border-b border-transparent font-medium  hover:border-ginBlack'
-                href='/community'
+                href='/inDevelopment'
               >
                 Collaborate
               </Link>
               <Link
                 className='w-fit border-b border-transparent font-medium hover:border-ginBlack'
-                href='/community'
+                href='/inDevelopment'
               >
                 Global Impact
               </Link>
               <Link
                 className='w-fit border-b border-transparent font-medium  hover:border-ginBlack'
-                href='/latestInformation'
+                href='/inDevelopment'
               >
                 Latest Information
               </Link>

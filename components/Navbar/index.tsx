@@ -42,7 +42,7 @@ export default function Navbar() {
                   ? 'border-pistachio'
                   : 'border-transparent'
               } border-b-2 hover:border-pistachio px-1 pt-1 text-ginBlack`}
-              href='/community'
+              href='/inDevelopment'
             >
               community
             </Link>
@@ -52,7 +52,7 @@ export default function Navbar() {
                   ? 'border-pistachio'
                   : 'border-transparent'
               } border-b-2 hover:border-pistachio px-1 pt-1 font-medium text-ginBlack`}
-              href='/collaborate'
+              href='/inDevelopment'
             >
               collaborate
             </Link>
@@ -62,7 +62,7 @@ export default function Navbar() {
                   ? 'border-pistachio'
                   : 'border-transparent'
               } border-b-2 hover:border-pistachio px-1 pt-1 text-ginBlack`}
-              href='/collaborate'
+              href='/inDevelopment'
             >
               latest information
             </Link>
