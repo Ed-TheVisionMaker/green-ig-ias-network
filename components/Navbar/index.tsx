@@ -32,7 +32,7 @@ export default function Navbar() {
                   ? 'border-pistachio'
                   : 'border-transparent'
               } border-b-2 hover:border-pistachio px-1 pt-1 text-ginBlack`}
-              href='/invasive'
+              href='/inDevelopment'
             >
               the invasive species
             </Link>

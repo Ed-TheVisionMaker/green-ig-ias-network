@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' className={`${openSans.variable} ${ubuntu.variable}`}>
-      <body>
+      <body className=''>
         <Navbar />
         {children}
         <Footer />
